@@ -92,57 +92,57 @@ export default function BurnZeroLandingPage() {
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <p className="text-sm text-zinc-400">Fleet Emissions Dashboard</p>
-                  <h3 className="text-2xl font-semibold mt-1">Live Carbon Activity</h3>
+                  <h3 className="text-2xl font-semibold mt-1">Last Month Activity</h3>
                 </div>
 
                 <div className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">
-                  LIVE
+                  VERIFIED
                 </div>
               </div>
 
               <div className="space-y-4">
                 <div className="bg-black/40 border border-white/10 rounded-2xl p-5">
                   <div className="flex items-center justify-between mb-3">
-                    <p className="text-zinc-300">Fuel Transaction</p>
+                    <p className="text-zinc-300">Monthly Fuel Volume</p>
                     <p className="text-green-400 font-semibold">Offset Complete</p>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <p className="text-zinc-500">Merchant</p>
-                      <p className="mt-1 font-medium">FIFCO Station</p>
+                      <p className="text-zinc-500">Fuel Offset</p>
+                      <p className="mt-1 font-medium">3M liters</p>
                     </div>
 
                     <div>
-                      <p className="text-zinc-500">CO₂ Generated</p>
-                      <p className="mt-1 font-medium">200.00 kg</p>
+                      <p className="text-zinc-500">CO₂ Offset</p>
+                      <p className="mt-1 font-medium">6,930 tonnes</p>
                     </div>
 
                     <div>
-                      <p className="text-zinc-500">Carbon Project</p>
-                      <p className="mt-1 font-medium">Costa Rica Landfill Gas</p>
+                      <p className="text-zinc-500">Transactions</p>
+                      <p className="mt-1 font-medium">48K</p>
                     </div>
 
                     <div>
                       <p className="text-zinc-500">Status</p>
-                      <p className="mt-1 font-medium text-green-400">Retired</p>
+                      <p className="mt-1 font-medium text-green-400">Reconciled</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
-                    <p className="text-zinc-400 text-sm">Monthly CO₂ Offset</p>
-                    <h3 className="text-3xl font-bold mt-2">52.4T</h3>
+                    <p className="text-zinc-400 text-sm">CO₂ Offset Last Month</p>
+                    <h3 className="text-3xl font-bold mt-2">6,930T</h3>
                     <div className="mt-4 h-2 bg-white/10 rounded-full overflow-hidden">
                       <div className="w-4/5 h-full bg-green-400 rounded-full" />
                     </div>
                   </div>
 
                   <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
-                    <p className="text-zinc-400 text-sm">Transactions Recorded</p>
-                    <h3 className="text-3xl font-bold mt-2">48,239</h3>
-                    <p className="text-green-400 text-sm mt-4">+18% this month</p>
+                    <p className="text-zinc-400 text-sm">Transactions Last Month</p>
+                    <h3 className="text-3xl font-bold mt-2">48K</h3>
+                    <p className="text-green-400 text-sm mt-4">From 3M liters offset</p>
                   </div>
                 </div>
               </div>
@@ -227,8 +227,8 @@ export default function BurnZeroLandingPage() {
             <div className="mt-10 space-y-6">
               {[
                 'Real-time emissions tracking per transaction',
-                'Automatic carbon credit retirement',
-                'Blockchain-ready audit infrastructure',
+                'Verified offset accounting',
+                'Audit-ready emissions infrastructure',
                 'Fleet analytics and sustainability reporting',
                 'Custom API integrations for enterprise systems',
                 'White-label climate programs for financial institutions',
@@ -249,15 +249,15 @@ export default function BurnZeroLandingPage() {
               </div>
 
               <div className="bg-black/40 rounded-2xl p-6 border border-white/10">
-                <p className="text-zinc-400 text-sm">Credits Retired</p>
-                <h3 className="text-4xl font-bold mt-2">84K</h3>
+                <p className="text-zinc-400 text-sm">Liters Offset</p>
+                <h3 className="text-4xl font-bold mt-2">3M</h3>
               </div>
 
               <div className="bg-black/40 rounded-2xl p-6 border border-white/10 col-span-2">
                 <p className="text-zinc-400 text-sm mb-4">Enterprise Ready Architecture</p>
 
                 <div className="flex flex-wrap gap-3">
-                  {['Fuel APIs', 'Carbon Registries', 'Blockchain', 'Banking Systems', 'Fleet Software'].map((tag) => (
+                  {['Fuel APIs', 'Emissions Data', 'Offset Accounting', 'Banking Systems', 'Fleet Software'].map((tag) => (
                     <div
                       key={tag}
                       className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-sm"
