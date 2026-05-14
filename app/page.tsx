@@ -5,9 +5,9 @@ export default function BurnZeroLandingPage() {
     <div className="min-h-screen bg-black text-white font-sans">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/70 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="relative w-10 h-10 overflow-hidden rounded-2xl bg-white">
+        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="relative w-14 h-14 overflow-hidden rounded-2xl bg-white shadow-lg shadow-green-500/10">
               <Image
                 src="/logo.png"
                 alt="Burn Zero logo"
@@ -17,8 +17,8 @@ export default function BurnZeroLandingPage() {
               />
             </div>
             <div>
-              <p className="font-semibold tracking-wide">Burn Zero</p>
-              <p className="text-xs text-zinc-400">Carbon Intelligence Platform</p>
+              <p className="text-2xl font-bold tracking-wide leading-none">Burn Zero</p>
+              <p className="mt-1 text-sm text-zinc-400">Carbon Intelligence Platform</p>
             </div>
           </div>
 
@@ -347,8 +347,8 @@ export default function BurnZeroLandingPage() {
       <footer id="contact" className="border-t border-white/10 py-12 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <div className="flex items-center gap-3">
-              <div className="relative w-10 h-10 overflow-hidden rounded-2xl bg-white">
+            <div className="flex items-center gap-4">
+              <div className="relative w-14 h-14 overflow-hidden rounded-2xl bg-white">
                 <Image
                   src="/logo.png"
                   alt="Burn Zero logo"
@@ -358,8 +358,8 @@ export default function BurnZeroLandingPage() {
               </div>
 
               <div>
-                <p className="font-semibold">Burn Zero</p>
-                <p className="text-zinc-400 text-sm">Carbon Intelligence & Emissions Offsetting</p>
+                <p className="text-2xl font-bold tracking-wide leading-none">Burn Zero</p>
+                <p className="mt-1 text-zinc-400 text-sm">Carbon Intelligence & Emissions Offsetting</p>
               </div>
             </div>
           </div>
