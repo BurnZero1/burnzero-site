@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function BurnZeroLandingPage() {
   return (
     <div className="min-h-screen bg-black text-white font-sans">
@@ -5,8 +7,14 @@ export default function BurnZeroLandingPage() {
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/70 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-white text-black flex items-center justify-center font-bold text-lg">
-              B
+            <div className="relative w-10 h-10 overflow-hidden rounded-2xl bg-white">
+              <Image
+                src="/logo.png"
+                alt="Burn Zero logo"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
             <div>
               <p className="font-semibold tracking-wide">Burn Zero</p>
@@ -340,8 +348,13 @@ export default function BurnZeroLandingPage() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-white text-black flex items-center justify-center font-bold text-lg">
-                B
+              <div className="relative w-10 h-10 overflow-hidden rounded-2xl bg-white">
+                <Image
+                  src="/logo.png"
+                  alt="Burn Zero logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
 
               <div>
