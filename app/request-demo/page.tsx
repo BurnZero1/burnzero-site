@@ -11,7 +11,7 @@ export default function RequestDemoPage() {
             <div className="relative h-14 w-14 overflow-hidden rounded-2xl bg-white shadow-lg shadow-green-500/10">
               <Image
                 src="/logo.png"
-                alt="Burn Zero logo"
+                alt="Logo de Burn Zero"
                 fill
                 className="object-contain"
                 priority
@@ -19,7 +19,7 @@ export default function RequestDemoPage() {
             </div>
             <div>
               <p className="text-2xl font-bold leading-none tracking-wide">Burn Zero</p>
-              <p className="mt-1 text-sm text-zinc-400">Carbon Intelligence Platform</p>
+              <p className="mt-1 text-sm text-zinc-400">Plataforma de inteligencia de carbono</p>
             </div>
           </Link>
 
@@ -27,24 +27,24 @@ export default function RequestDemoPage() {
             href="/"
             className="rounded-xl border border-white/15 px-5 py-2 text-sm font-medium text-zinc-200 transition hover:bg-white/5"
           >
-            Back
+            Volver
           </Link>
         </nav>
 
         <section className="grid items-start gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="pt-6">
-            <p className="font-medium text-green-400">Request Demo</p>
+            <p className="font-medium text-green-400">Solicitar demo</p>
             <h1 className="mt-4 text-5xl font-bold leading-tight tracking-tight md:text-7xl">
-              Build climate accountability into every transaction.
+              Integra responsabilidad climática en cada transacción.
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-zinc-300">
-              Share a few details and the Burn Zero team will follow up about carbon
-              tracking, verified offsets, and transparent credit retirement.
+              Comparte algunos detalles y el equipo de Burn Zero te contactará para hablar sobre
+              seguimiento de carbono, compensaciones verificadas y retiro transparente de créditos.
             </p>
           </div>
 
           <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-6 shadow-2xl shadow-green-500/10 backdrop-blur md:p-10">
-            <h2 className="text-3xl font-semibold">Tell us about your project</h2>
+            <h2 className="text-3xl font-semibold">Cuéntanos sobre tu proyecto</h2>
             <DemoRequestForm />
           </div>
         </section>

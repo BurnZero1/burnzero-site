@@ -12,12 +12,12 @@ function cleanField(value: unknown) {
 
 function asPlainText(name: string, company: string, message: string) {
   return [
-    "New Burn Zero demo request",
+    "Nueva solicitud de demo de Burn Zero",
     "",
-    `Name: ${name}`,
-    `Company: ${company}`,
+    `Nombre: ${name}`,
+    `Empresa: ${company}`,
     "",
-    "Message:",
+    "Mensaje:",
     message,
   ].join("\n");
 }
@@ -32,10 +32,10 @@ function asHtml(name: string, company: string, message: string) {
       .replaceAll("'", "&#039;");
 
   return `
-    <h1>New Burn Zero demo request</h1>
-    <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-    <p><strong>Company:</strong> ${escapeHtml(company)}</p>
-    <p><strong>Message:</strong></p>
+    <h1>Nueva solicitud de demo de Burn Zero</h1>
+    <p><strong>Nombre:</strong> ${escapeHtml(name)}</p>
+    <p><strong>Empresa:</strong> ${escapeHtml(company)}</p>
+    <p><strong>Mensaje:</strong></p>
     <p>${escapeHtml(message).replaceAll("\n", "<br />")}</p>
   `;
 }
@@ -46,7 +46,7 @@ export async function POST(request: Request) {
   try {
     body = (await request.json()) as DemoRequestBody;
   } catch {
-    return Response.json({ message: "Invalid request." }, { status: 400 });
+    return Response.json({ message: "Solicitud no válida." }, { status: 400 });
   }
 
   const name = cleanField(body.name);
@@ -55,7 +55,7 @@ export async function POST(request: Request) {
 
   if (!name || !company || !message) {
     return Response.json(
-      { message: "Name, company, and message are required." },
+      { message: "Nombre, empresa y mensaje son obligatorios." },
       { status: 400 }
     );
   }
@@ -68,7 +68,7 @@ export async function POST(request: Request) {
     return Response.json(
       {
         message:
-          "Email is not configured yet. Add RESEND_API_KEY to enable demo requests.",
+          "El correo todavía no está configurado. Agrega RESEND_API_KEY para habilitar las solicitudes de demo.",
       },
       { status: 503 }
     );
@@ -83,7 +83,7 @@ export async function POST(request: Request) {
     body: JSON.stringify({
       from: fromEmail,
       to: RECIPIENT_EMAIL,
-      subject: `Burn Zero demo request from ${name}`,
+      subject: `Solicitud de demo de Burn Zero de ${name}`,
       text: asPlainText(name, company, message),
       html: asHtml(name, company, message),
     }),
@@ -91,10 +91,10 @@ export async function POST(request: Request) {
 
   if (!response.ok) {
     return Response.json(
-      { message: "Email could not be sent. Please try again." },
+      { message: "No se pudo enviar el correo. Inténtalo de nuevo." },
       { status: 502 }
     );
   }
 
-  return Response.json({ message: "Demo request sent." });
+  return Response.json({ message: "Solicitud de demo enviada." });
 }

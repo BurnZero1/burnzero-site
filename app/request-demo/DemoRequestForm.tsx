@@ -32,18 +32,18 @@ export default function DemoRequestForm() {
       const result = (await response.json()) as { message?: string };
 
       if (!response.ok) {
-        throw new Error(result.message || "Unable to send your request.");
+        throw new Error(result.message || "No se pudo enviar tu solicitud.");
       }
 
       form.reset();
       setStatus("success");
-      setMessage("Thanks. Your demo request was sent.");
+      setMessage("Gracias. Tu solicitud de demo fue enviada.");
     } catch (error) {
       setStatus("error");
       setMessage(
         error instanceof Error
           ? error.message
-          : "Unable to send your request. Please try again."
+          : "No se pudo enviar tu solicitud. Inténtalo de nuevo."
       );
     }
   }
@@ -52,7 +52,7 @@ export default function DemoRequestForm() {
     <form onSubmit={handleSubmit} className="mt-10 space-y-6">
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-zinc-300">
-          Name
+          Nombre
         </label>
         <input
           id="name"
@@ -61,13 +61,13 @@ export default function DemoRequestForm() {
           required
           autoComplete="name"
           className="mt-2 w-full rounded-2xl border border-white/10 bg-black/50 px-5 py-4 text-white outline-none transition placeholder:text-zinc-600 focus:border-green-400"
-          placeholder="Your name"
+          placeholder="Tu nombre"
         />
       </div>
 
       <div>
         <label htmlFor="company" className="block text-sm font-medium text-zinc-300">
-          Company
+          Empresa
         </label>
         <input
           id="company"
@@ -76,13 +76,13 @@ export default function DemoRequestForm() {
           required
           autoComplete="organization"
           className="mt-2 w-full rounded-2xl border border-white/10 bg-black/50 px-5 py-4 text-white outline-none transition placeholder:text-zinc-600 focus:border-green-400"
-          placeholder="Company name"
+          placeholder="Nombre de la empresa"
         />
       </div>
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-zinc-300">
-          Message
+          Mensaje
         </label>
         <textarea
           id="message"
@@ -90,7 +90,7 @@ export default function DemoRequestForm() {
           required
           rows={6}
           className="mt-2 w-full resize-none rounded-2xl border border-white/10 bg-black/50 px-5 py-4 text-white outline-none transition placeholder:text-zinc-600 focus:border-green-400"
-          placeholder="Tell us what you want to build with Burn Zero"
+          placeholder="Cuéntanos qué quieres construir con Burn Zero"
         />
       </div>
 
@@ -99,7 +99,7 @@ export default function DemoRequestForm() {
         disabled={status === "submitting"}
         className="w-full rounded-2xl bg-green-400 px-7 py-4 font-semibold text-black transition hover:scale-[1.01] disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {status === "submitting" ? "Sending..." : "Send Request"}
+        {status === "submitting" ? "Enviando..." : "Enviar solicitud"}
       </button>
 
       {message ? (

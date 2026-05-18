@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Burn Zero",
-  description: "Carbon intelligence and emissions offsetting platform",
+  description: "Plataforma de inteligencia de carbono y compensación de emisiones",
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",
@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
