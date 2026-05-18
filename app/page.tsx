@@ -29,9 +29,12 @@ export default function BurnZeroLandingPage() {
             <a href="#contact" className="hover:text-white transition">Contact</a>
           </div>
 
-          <button className="bg-white text-black px-5 py-2 rounded-xl font-medium hover:scale-105 transition">
+          <a
+            href="/request-demo"
+            className="bg-white text-black px-5 py-2 rounded-xl font-medium hover:scale-105 transition"
+          >
             Request Demo
-          </button>
+          </a>
         </div>
       </nav>
 
@@ -58,13 +61,19 @@ export default function BurnZeroLandingPage() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <button className="bg-green-400 text-black px-7 py-4 rounded-2xl font-semibold hover:scale-105 transition shadow-2xl shadow-green-500/20">
+              <a
+                href="/request-demo"
+                className="bg-green-400 text-black px-7 py-4 rounded-2xl font-semibold hover:scale-105 transition shadow-2xl shadow-green-500/20"
+              >
                 Book a Demo
-              </button>
+              </a>
 
-              <button className="border border-white/20 px-7 py-4 rounded-2xl font-semibold hover:bg-white/5 transition">
+              <a
+                href="#platform"
+                className="border border-white/20 px-7 py-4 rounded-2xl font-semibold hover:bg-white/5 transition"
+              >
                 Explore Platform
-              </button>
+              </a>
             </div>
 
             <div className="mt-12 grid grid-cols-3 gap-6 max-w-xl">
@@ -228,6 +237,7 @@ export default function BurnZeroLandingPage() {
               {[
                 'Real-time emissions tracking per transaction',
                 'Verified offset accounting',
+                'Ethereum blockchain credit retirement records for full transparency and traceability',
                 'Audit-ready emissions infrastructure',
                 'Fleet analytics and sustainability reporting',
                 'Custom API integrations for enterprise systems',
@@ -331,13 +341,19 @@ export default function BurnZeroLandingPage() {
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-4">
-              <button className="bg-white text-black px-8 py-4 rounded-2xl font-semibold hover:scale-105 transition">
+              <a
+                href="/request-demo"
+                className="bg-white text-black px-8 py-4 rounded-2xl font-semibold hover:scale-105 transition"
+              >
                 Schedule a Demo
-              </button>
+              </a>
 
-              <button className="border border-white/20 px-8 py-4 rounded-2xl font-semibold hover:bg-white/5 transition">
+              <a
+                href="/request-demo"
+                className="border border-white/20 px-8 py-4 rounded-2xl font-semibold hover:bg-white/5 transition"
+              >
                 Contact Sales
-              </button>
+              </a>
             </div>
           </div>
         </div>
