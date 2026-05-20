@@ -182,8 +182,9 @@ export default function BurnZeroLandingPage() {
           <div className="max-w-3xl">
             <p className="text-green-400 font-medium mb-4">Cómo funciona Burn Zero</p>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-              Contabilidad y compensación de carbono,
-              <span className="text-zinc-500"> automatizadas de principio a fin.</span>
+              Compensación de carbono automatizada con infraestructura de retiro directamente
+              integrada en la transaccion.
+              <span className="text-zinc-500"> de principio a fin.</span>
             </h2>
           </div>
 
