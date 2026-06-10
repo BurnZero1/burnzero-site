@@ -18,7 +18,7 @@ export default function BurnZeroLandingPage() {
             </div>
             <div>
               <p className="text-2xl font-bold tracking-wide leading-none">Burn Zero</p>
-              <p className="mt-1 text-sm text-zinc-400">Plataforma de inteligencia de carbono</p>
+              <p className="mt-1 text-sm text-zinc-400">Conciliación de deuda de CO₂</p>
             </div>
           </div>
 
@@ -46,18 +46,18 @@ export default function BurnZeroLandingPage() {
           <div>
             <div className="inline-flex items-center gap-2 border border-green-500/30 bg-green-500/10 px-4 py-2 rounded-full text-sm text-green-300 mb-6">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              Seguimiento y compensación de carbono en tiempo real
+              Conciliación de deuda de CO₂ verificada
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight">
-              Convierte cada
-              <span className="block text-green-400">transacción de combustible</span>
-              en acción climática.
+              Cierra la brecha entre tu
+              <span className="block text-green-400">deuda de carbono</span>
+              y tus compensaciones.
             </h1>
 
             <p className="mt-8 text-lg text-zinc-300 leading-relaxed max-w-2xl">
-              Burn Zero ayuda a flotas, empresas y plataformas financieras a rastrear, calcular
-              y compensar automáticamente las emisiones de carbono generadas por el consumo de combustible en tiempo real.
+              Burn Zero ayuda a empresas y operadores de combustible a registrar deuda de CO₂,
+              verificar certificados de compensación y conciliar ambos con trazabilidad auditable en blockchain.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
@@ -78,18 +78,18 @@ export default function BurnZeroLandingPage() {
 
             <div className="mt-12 grid grid-cols-3 gap-6 max-w-xl">
               <div>
-                <p className="text-3xl font-bold">24/7</p>
-                <p className="text-zinc-400 text-sm mt-1">Seguimiento automatizado</p>
+                <p className="text-3xl font-bold">IA</p>
+                <p className="text-zinc-400 text-sm mt-1">Verificación de certificados</p>
               </div>
 
               <div>
                 <p className="text-3xl font-bold">100%</p>
-                <p className="text-zinc-400 text-sm mt-1">Compensaciones verificadas</p>
+                <p className="text-zinc-400 text-sm mt-1">Conciliación auditable</p>
               </div>
 
               <div>
-                <p className="text-3xl font-bold">API</p>
-                <p className="text-zinc-400 text-sm mt-1">Infraestructura lista</p>
+                <p className="text-3xl font-bold">On-chain</p>
+                <p className="text-zinc-400 text-sm mt-1">Registro inmutable</p>
               </div>
             </div>
           </div>
@@ -100,8 +100,8 @@ export default function BurnZeroLandingPage() {
             <div className="relative bg-white/5 border border-white/10 rounded-[32px] p-6 backdrop-blur-xl shadow-2xl">
               <div className="flex items-center justify-between mb-6">
                 <div>
-                  <p className="text-sm text-zinc-400">Panel de emisiones de flota</p>
-                  <h3 className="text-2xl font-semibold mt-1">Actividad del mes pasado</h3>
+                  <p className="text-sm text-zinc-400">Panel de conciliación de CO₂</p>
+                  <h3 className="text-2xl font-semibold mt-1">Deuda pendiente por empresa</h3>
                 </div>
 
                 <div className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">
@@ -112,24 +112,24 @@ export default function BurnZeroLandingPage() {
               <div className="space-y-4">
                 <div className="bg-black/40 border border-white/10 rounded-2xl p-5">
                   <div className="flex items-center justify-between mb-3">
-                    <p className="text-zinc-300">Volumen mensual de combustible</p>
-                    <p className="text-green-400 font-semibold">Compensación completa</p>
+                    <p className="text-zinc-300">Acme Corp — certificado Fonafifo</p>
+                    <p className="text-green-400 font-semibold">Conciliación completa</p>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <p className="text-zinc-500">Combustible compensado</p>
-                      <p className="mt-1 font-medium">3M litros</p>
+                      <p className="text-zinc-500">Deuda registrada</p>
+                      <p className="mt-1 font-medium">6,930 t CO₂</p>
                     </div>
 
                     <div>
-                      <p className="text-zinc-500">CO₂ compensado</p>
-                      <p className="mt-1 font-medium">6,930 toneladas</p>
+                      <p className="text-zinc-500">Compensación verificada</p>
+                      <p className="mt-1 font-medium">6,930 t CO₂</p>
                     </div>
 
                     <div>
-                      <p className="text-zinc-500">Transacciones</p>
-                      <p className="mt-1 font-medium">48K</p>
+                      <p className="text-zinc-500">Registros conciliados</p>
+                      <p className="mt-1 font-medium">142</p>
                     </div>
 
                     <div>
@@ -141,17 +141,17 @@ export default function BurnZeroLandingPage() {
 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
-                    <p className="text-zinc-400 text-sm">CO₂ compensado el mes pasado</p>
+                    <p className="text-zinc-400 text-sm">Deuda conciliada este mes</p>
                     <h3 className="text-3xl font-bold mt-2">6,930T</h3>
                     <div className="mt-4 h-2 bg-white/10 rounded-full overflow-hidden">
-                      <div className="w-4/5 h-full bg-green-400 rounded-full" />
+                      <div className="w-full h-full bg-green-400 rounded-full" />
                     </div>
                   </div>
 
                   <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
-                    <p className="text-zinc-400 text-sm">Transacciones del mes pasado</p>
-                    <h3 className="text-3xl font-bold mt-2">48K</h3>
-                    <p className="text-green-400 text-sm mt-4">De 3M litros compensados</p>
+                    <p className="text-zinc-400 text-sm">Certificados verificados</p>
+                    <h3 className="text-3xl font-bold mt-2">12</h3>
+                    <p className="text-green-400 text-sm mt-4">3 empresas conciliadas</p>
                   </div>
                 </div>
               </div>
@@ -164,14 +164,14 @@ export default function BurnZeroLandingPage() {
       <section className="border-y border-white/10 bg-white/[0.02]">
         <div className="max-w-7xl mx-auto px-6 py-10">
           <p className="text-center text-zinc-500 uppercase tracking-[0.3em] text-xs mb-8">
-            Creado para flotas modernas, redes de combustible y plataformas empresariales
+            Creado para equipos de sostenibilidad, operadores de combustible y auditoría ESG
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-zinc-300">
-            <div className="border border-white/10 rounded-2xl py-5">Redes de combustible</div>
-            <div className="border border-white/10 rounded-2xl py-5">Flotas logísticas</div>
-            <div className="border border-white/10 rounded-2xl py-5">Movilidad corporativa</div>
-            <div className="border border-white/10 rounded-2xl py-5">Bancos y fintech</div>
+            <div className="border border-white/10 rounded-2xl py-5">Distribuidores de combustible</div>
+            <div className="border border-white/10 rounded-2xl py-5">Empresas industriales</div>
+            <div className="border border-white/10 rounded-2xl py-5">Equipos ESG corporativos</div>
+            <div className="border border-white/10 rounded-2xl py-5">Auditores y consultores</div>
           </div>
         </div>
       </section>
@@ -182,8 +182,7 @@ export default function BurnZeroLandingPage() {
           <div className="max-w-3xl">
             <p className="text-green-400 font-medium mb-4">Cómo funciona Burn Zero</p>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-              Compensación de carbono automatizada con infraestructura de retiro directamente
-              integrada en la transaccion.
+              Conciliación de deuda de CO₂ con verificación de certificados
               <span className="text-zinc-500"> de principio a fin.</span>
             </h2>
           </div>
@@ -192,21 +191,21 @@ export default function BurnZeroLandingPage() {
             {[
               {
                 step: '01',
-                title: 'Captura datos de combustible',
+                title: 'Registra deuda de CO₂',
                 description:
-                  'Integra tarjetas de combustible, sistemas de flota o redes de pago para capturar automáticamente cada transacción de combustible en tiempo real.',
+                  'Importa datos operativos de consumo de combustible por empresa. Cada registro queda en estado PENDING con trazabilidad on-chain.',
               },
               {
                 step: '02',
-                title: 'Calcula emisiones de CO₂',
+                title: 'Verifica certificados de compensación',
                 description:
-                  'Burn Zero calcula emisiones al instante usando metodologías estandarizadas de conversión de combustible y modelos de inteligencia de carbono.',
+                  'Sube certificados de offset en PDF. La IA extrae empresa y toneladas compensadas, y los cruza con la deuda pendiente.',
               },
               {
                 step: '03',
-                title: 'Compensa y retira créditos',
+                title: 'Concilia y cierra en blockchain',
                 description:
-                  'Los créditos de carbono verificados se retiran automáticamente, creando registros de impacto climático transparentes y auditables.',
+                  'Cuando deuda y compensación coinciden, los registros pasan a COMPLETED con prueba de offset inmutable y auditable.',
               },
             ].map((item) => (
               <div
@@ -231,18 +230,18 @@ export default function BurnZeroLandingPage() {
           <div>
             <p className="text-green-400 font-medium mb-4">Plataforma empresarial</p>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-              Infraestructura para la próxima generación de comercio consciente del clima.
+              Infraestructura para conciliar deuda de carbono con compensaciones verificadas.
             </h2>
 
             <div className="mt-10 space-y-6">
               {[
-                'Seguimiento de emisiones en tiempo real por transacción',
-                'Contabilidad de compensaciones verificadas',
-                'Registros de retiro de créditos en blockchain de Ethereum para total transparencia y trazabilidad',
-                'Infraestructura de emisiones lista para auditorías',
-                'Analítica de flotas y reportes de sostenibilidad',
-                'Integraciones API personalizadas para sistemas empresariales',
-                'Programas climáticos de marca blanca para instituciones financieras',
+                'Registro de deuda de CO₂ por empresa, combustible y volumen',
+                'Verificación automática de certificados de compensación con IA',
+                'Conciliación deuda vs. compensación por empresa y toneladas',
+                'Ciclo de vida PENDING → COMPLETED con prueba de offset en blockchain',
+                'Registro inmutable en Ethereum para auditorías ESG',
+                'Panel de deuda pendiente y estado de conciliación por empresa',
+                'API e integraciones para sistemas de reporte y cumplimiento',
               ].map((feature) => (
                 <div key={feature} className="flex items-start gap-4">
                   <div className="w-6 h-6 rounded-full bg-green-400 mt-1" />
@@ -260,15 +259,15 @@ export default function BurnZeroLandingPage() {
               </div>
 
               <div className="bg-black/40 rounded-2xl p-6 border border-white/10">
-                <p className="text-zinc-400 text-sm">Litros compensados</p>
-                <h3 className="text-4xl font-bold mt-2">3M</h3>
+                <p className="text-zinc-400 text-sm">Toneladas conciliadas</p>
+                <h3 className="text-4xl font-bold mt-2">6.9K</h3>
               </div>
 
               <div className="bg-black/40 rounded-2xl p-6 border border-white/10 col-span-2">
                 <p className="text-zinc-400 text-sm mb-4">Arquitectura lista para empresas</p>
 
                 <div className="flex flex-wrap gap-3">
-                  {['API de combustible', 'Datos de emisiones', 'Contabilidad de compensaciones', 'Sistemas bancarios', 'Software de flotas'].map((tag) => (
+                  {['Importación CSV', 'Certificados PDF', 'Conciliación IA', 'Registro on-chain', 'Reportes ESG'].map((tag) => (
                     <div
                       key={tag}
                       className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-sm"
@@ -289,27 +288,27 @@ export default function BurnZeroLandingPage() {
           <div className="text-center max-w-3xl mx-auto">
             <p className="text-green-400 font-medium mb-4">A quién servimos</p>
             <h2 className="text-4xl md:text-5xl font-bold">
-              Diseñado para industrias con consumo de combustible medible.
+              Diseñado para quienes deben demostrar que compensaron lo que emitieron.
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 mt-16">
             {[
               {
-                title: 'Operadores de flotas',
-                description: 'Rastrea y compensa emisiones de combustible en camiones, flotas de entrega y vehículos comerciales.',
+                title: 'Distribuidores de combustible',
+                description: 'Registra la deuda de CO₂ de tus clientes y concilia certificados de compensación por empresa.',
               },
               {
-                title: 'Redes de pago de combustible',
-                description: 'Agrega capas automatizadas de sostenibilidad directamente a ecosistemas de transacciones de combustible.',
+                title: 'Empresas industriales y flotas',
+                description: 'Centraliza deuda de carbono por operación y demuestra que cada tonelada emitida tiene su compensación verificada.',
               },
               {
-                title: 'Bancos y fintech',
-                description: 'Ofrece productos financieros conscientes del clima vinculados a la actividad transaccional de carbono.',
+                title: 'Equipos de sostenibilidad',
+                description: 'Cierra el ciclo entre emisiones registradas y offsets comprados, con evidencia lista para reportes ESG.',
               },
               {
-                title: 'Empresas corporativas',
-                description: 'Cumple objetivos ESG y de sostenibilidad con datos de emisiones verificables y compensación.',
+                title: 'Auditores y consultores',
+                description: 'Accede a un registro inmutable que vincula deuda, certificado y prueba de conciliación on-chain.',
               },
             ].map((item) => (
               <div
@@ -331,14 +330,14 @@ export default function BurnZeroLandingPage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(34,197,94,0.25),transparent_30%)]" />
 
           <div className="relative z-10">
-            <p className="text-green-300 font-medium mb-4">¿Listo para integrar responsabilidad climática en cada transacción?</p>
+            <p className="text-green-300 font-medium mb-4">¿Listo para conciliar tu deuda de carbono con compensaciones verificadas?</p>
 
             <h2 className="text-4xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto">
-              Lanza tu infraestructura de inteligencia de carbono con Burn Zero.
+              Implementa conciliación de CO₂ auditable con Burn Zero.
             </h2>
 
             <p className="text-zinc-300 text-lg mt-8 max-w-2xl mx-auto leading-relaxed">
-              Potencia tu negocio con seguimiento automatizado de carbono, compensación transparente y reportes climáticos de nivel empresarial.
+              Registra deuda, verifica certificados y demuestra que cada tonelada compensada está respaldada por evidencia on-chain.
             </p>
 
             <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -376,7 +375,7 @@ export default function BurnZeroLandingPage() {
 
               <div>
                 <p className="text-2xl font-bold tracking-wide leading-none">Burn Zero</p>
-                <p className="mt-1 text-zinc-400 text-sm">Inteligencia de carbono y compensación de emisiones</p>
+                <p className="mt-1 text-zinc-400 text-sm">Conciliación de deuda de CO₂ y trazabilidad on-chain</p>
               </div>
             </div>
           </div>

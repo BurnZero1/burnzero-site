@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Burn Zero",
-  description: "Plataforma de inteligencia de carbono y compensación de emisiones",
+  description: "Conciliación de deuda de CO₂: registra emisiones, verifica certificados de compensación y cierra el ciclo con trazabilidad on-chain.",
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",

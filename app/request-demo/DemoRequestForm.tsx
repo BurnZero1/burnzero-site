@@ -90,7 +90,7 @@ export default function DemoRequestForm() {
           required
           rows={6}
           className="mt-2 w-full resize-none rounded-2xl border border-white/10 bg-black/50 px-5 py-4 text-white outline-none transition placeholder:text-zinc-600 focus:border-green-400"
-          placeholder="Cuéntanos qué quieres construir con Burn Zero"
+          placeholder="Cuéntanos sobre tu volumen de deuda de CO₂, certificados de compensación o necesidades de conciliación"
         />
       </div>
 
