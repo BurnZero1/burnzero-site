@@ -193,13 +193,13 @@ export default function BurnZeroLandingPage() {
                 step: '01',
                 title: 'Registra deuda de CO₂',
                 description:
-                  'Importa datos operativos de consumo de combustible por empresa. Cada registro queda en estado PENDING con trazabilidad on-chain.',
+                  'A través de Fleetmagic, automatizamos el registro de CO₂ en la red Polygon (blockchain). Cada registro queda en estado PENDING con trazabilidad on-chain.',
               },
               {
                 step: '02',
-                title: 'Verifica certificados de compensación',
+                title: 'Enlaza tu certificado a tu deuda de carbono',
                 description:
-                  'Sube certificados de offset en PDF. La IA extrae empresa y toneladas compensadas, y los cruza con la deuda pendiente.',
+                  'Automatiza el proceso de verificación y compensación de tu deuda de carbono. Con IA, extrae datos críticos del certificado de retiro de créditos de CO₂ y los cruza con la deuda pendiente.',
               },
               {
                 step: '03',
