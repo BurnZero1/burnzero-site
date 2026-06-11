@@ -17,7 +17,7 @@ export default function BurnZeroLandingPage() {
               />
             </div>
             <div>
-              <p className="text-2xl font-bold tracking-wide leading-none">Burn Zero</p>
+              <p className="text-2xl font-bold tracking-wide leading-none"><span className="text-green-400">Burn</span>Zero</p>
               <p className="mt-1 text-sm text-zinc-400">Conciliación de deuda de CO₂</p>
             </div>
           </div>
