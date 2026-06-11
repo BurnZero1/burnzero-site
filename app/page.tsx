@@ -7,7 +7,7 @@ export default function BurnZeroLandingPage() {
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/70 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <div className="relative w-14 h-14 overflow-hidden rounded-2xl bg-white shadow-lg shadow-green-500/10">
+            <div className="relative w-16 h-16 overflow-hidden rounded-2xl bg-zinc-900 shadow-lg shadow-green-500/10">
               <Image
                 src="/logo.png"
                 alt="Logo de Burn Zero"
@@ -364,7 +364,7 @@ export default function BurnZeroLandingPage() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
             <div className="flex items-center gap-4">
-              <div className="relative w-14 h-14 overflow-hidden rounded-2xl bg-white">
+              <div className="relative w-16 h-16 overflow-hidden rounded-2xl bg-zinc-900">
                 <Image
                   src="/logo.png"
                   alt="Logo de Burn Zero"

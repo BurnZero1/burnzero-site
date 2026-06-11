@@ -8,7 +8,7 @@ export default function RequestDemoPage() {
       <div className="mx-auto flex max-w-6xl flex-col gap-16">
         <nav className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-4">
-            <div className="relative h-14 w-14 overflow-hidden rounded-2xl bg-white shadow-lg shadow-green-500/10">
+            <div className="relative h-16 w-16 overflow-hidden rounded-2xl bg-zinc-900 shadow-lg shadow-green-500/10">
               <Image
                 src="/logo.png"
                 alt="Logo de Burn Zero"
