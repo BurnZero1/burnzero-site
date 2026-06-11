@@ -10,6 +10,14 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Brand green sampled from the logo leaf (less vibrant, lime/olive) */
+  --color-green-200: #c9e69b;
+  --color-green-300: #a6d35c;
+  --color-green-400: #84b430;
+  --color-green-500: #6f9e2b;
+  --color-green-600: #5e8725;
+  --color-green-700: #4d6e1f;
 }
 
 @media (prefers-color-scheme: dark) {
