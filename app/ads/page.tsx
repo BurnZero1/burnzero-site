@@ -35,7 +35,10 @@ export default function AdsPage() {
           <p className="text-green-400 text-xs font-bold uppercase tracking-widest mb-2">
             Leaderboard · 728 × 90
           </p>
-          <h1 className="text-2xl font-bold mb-6">Top / bottom dashboard banner</h1>
+          <h1 className="text-2xl font-bold mb-2">Top / bottom dashboard banner</h1>
+          <p className="text-sm text-zinc-400 mb-6">
+            Three swipeable pages: hero, cómo funciona (3 steps), and CTA. Scroll horizontally or use the dots.
+          </p>
           <div className="overflow-x-auto rounded-2xl border border-white/10 bg-zinc-950 p-4">
             <iframe
               src={LEADERBOARD_SRC}
@@ -78,8 +81,9 @@ export default function AdsPage() {
             <li>https://www.burn-zero.com/ads/sidebar-300x250.html</li>
           </ul>
           <p className="mt-4 text-zinc-400">
-            Both units link to the demo request flow. Use the iframe snippets inside FleetMagic
-            dashboard slots, or open the HTML URLs directly for screenshots.
+            The leaderboard unit is a 3-page horizontal scroll ad; the sidebar links to the demo
+            request flow. Use the iframe snippets inside FleetMagic dashboard slots, or open the
+            HTML URLs directly for screenshots.
           </p>
         </section>
       </main>

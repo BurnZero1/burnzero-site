@@ -10,22 +10,45 @@
     html, body { width: 728px; height: 90px; overflow: hidden; }
     body { font-family: Inter, system-ui, sans-serif; background: #0a0a0a; }
 
-    .ad {
+    .ad-shell {
       width: 728px;
       height: 90px;
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      padding: 0 20px;
-      background: linear-gradient(105deg, #0a0a0a 0%, #142010 55%, #0a0a0a 100%);
-      border: 2px solid #5e8725;
-      text-decoration: none;
-      color: #fff;
       position: relative;
-      overflow: hidden;
+      border: 2px solid #5e8725;
+      background: #0a0a0a;
     }
 
-    .ad::before {
+    .ad-track {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .ad-track::-webkit-scrollbar { display: none; }
+
+    .ad-page {
+      flex: 0 0 728px;
+      width: 728px;
+      height: 90px;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 18px;
+      background: linear-gradient(105deg, #0a0a0a 0%, #142010 55%, #0a0a0a 100%);
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    .ad-page::before {
       content: '';
       position: absolute;
       right: -40px;
@@ -119,24 +142,289 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       border: 2px solid #84b430;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .page-2-intro {
+      flex-shrink: 0;
+      width: 118px;
+    }
+
+    .eyebrow {
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #84b430;
+    }
+
+    .page-2-title {
+      margin-top: 4px;
+      font-size: 11px;
+      font-weight: 900;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .steps {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .step {
+      min-width: 0;
+      padding: 6px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 5px;
+      background: #84b430;
+      color: #0a0a0a;
+      font-size: 8px;
+      font-weight: 900;
+      margin-bottom: 4px;
+    }
+
+    .step-title {
+      font-size: 9px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 2px;
+    }
+
+    .step-desc {
+      font-size: 7px;
+      font-weight: 600;
+      line-height: 1.25;
+      color: #a1a1aa;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .page-3-copy {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .page-3-headline {
+      font-size: 14px;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .page-3-headline span { color: #71717a; }
+
+    .page-3-sub {
+      margin-top: 4px;
+      font-size: 9px;
+      font-weight: 600;
+      color: #a1a1aa;
+    }
+
+    .nav {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4px;
+    }
+
+    .nav-btn {
+      pointer-events: auto;
+      width: 22px;
+      height: 22px;
+      border: 1px solid rgba(132, 180, 48, 0.35);
+      border-radius: 999px;
+      background: rgba(10, 10, 10, 0.82);
+      color: #84b430;
+      font-size: 12px;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .ad-shell:hover .nav-btn,
+    .ad-shell:focus-within .nav-btn {
+      opacity: 1;
+    }
+
+    .nav-btn:disabled {
+      opacity: 0.25 !important;
+      cursor: default;
+    }
+
+    .dots {
+      position: absolute;
+      left: 50%;
+      bottom: 5px;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 5px;
+      pointer-events: auto;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      border: 0;
+      padding: 0;
+      background: rgba(255, 255, 255, 0.25);
+      cursor: pointer;
+    }
+
+    .dot.is-active {
+      background: #84b430;
+    }
+
+    .hint {
+      position: absolute;
+      right: 10px;
+      bottom: 5px;
+      font-size: 7px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #71717a;
+      pointer-events: none;
     }
   </style>
 </head>
 <body>
-  <a class="ad" href="https://www.burn-zero.com" target="_blank" rel="noopener noreferrer" aria-label="Burn Zero — conciliación de deuda de CO₂">
-    <div class="logo">
-      <div class="logo-main">Burn<span>Zero</span></div>
-      <div class="logo-tag">Add-on FleetMagic</div>
+  <div class="ad-shell">
+    <div class="ad-track" id="track" aria-label="Burn Zero — conciliación de deuda de CO₂">
+      <!-- Page 1 -->
+      <section class="ad-page page-1">
+        <div class="logo">
+          <div class="logo-main">Burn<span>Zero</span></div>
+          <div class="logo-tag">Add-on FleetMagic</div>
+        </div>
+        <div class="copy">
+          <div class="headline">Concilia tu <em>deuda de CO₂</em> con certificados verificados</div>
+          <div class="sub">via API · conciliacion AI · prueba on-chain auditable · transparente, traseable, immutable</div>
+        </div>
+        <div class="pills">
+          <span class="pill">IA</span>
+          <span class="pill">On-chain</span>
+        </div>
+        <a class="cta" href="https://www.burn-zero.com" target="_blank" rel="noopener noreferrer">Explorar</a>
+      </section>
+
+      <!-- Page 2: Cómo funciona -->
+      <section class="ad-page page-2">
+        <div class="page-2-intro">
+          <div class="eyebrow">Cómo funciona</div>
+          <div class="page-2-title">Conciliación de deuda de CO₂ de principio a fin</div>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <div class="step-num">01</div>
+            <div class="step-title">Registra deuda de CO₂</div>
+            <p class="step-desc">Fleetmagic registra CO₂ en Polygon. Cada registro queda PENDING con trazabilidad on-chain.</p>
+          </article>
+          <article class="step">
+            <div class="step-num">02</div>
+            <div class="step-title">Enlaza tu certificado</div>
+            <p class="step-desc">La IA extrae datos del certificado de retiro y los cruza con la deuda pendiente.</p>
+          </article>
+          <article class="step">
+            <div class="step-num">03</div>
+            <div class="step-title">Concilia en blockchain</div>
+            <p class="step-desc">Cuando coinciden, los registros pasan a COMPLETED con prueba inmutable y auditable.</p>
+          </article>
+        </div>
+        <a class="cta" href="https://www.burn-zero.com/#how-it-works" target="_blank" rel="noopener noreferrer">Ver más</a>
+      </section>
+
+      <!-- Page 3 -->
+      <section class="ad-page page-3">
+        <div class="logo">
+          <div class="logo-main">Burn<span>Zero</span></div>
+          <div class="logo-tag">Verificación end-to-end</div>
+        </div>
+        <div class="page-3-copy">
+          <div class="page-3-headline">
+            Conciliación con certificados verificados
+            <span> de principio a fin.</span>
+          </div>
+          <div class="page-3-sub">Registro · verificación con IA · cierre on-chain auditable</div>
+        </div>
+        <a class="cta" href="https://www.burn-zero.com/#how-it-works" target="_blank" rel="noopener noreferrer">Cómo funciona</a>
+      </section>
     </div>
-    <div class="copy">
-      <div class="headline">Concilia tu <em>deuda de CO₂</em> con certificados verificados</div>
-      <div class="sub">via API · conciliacion AI · prueba on-chain auditable · transparente, traseable, immutable</div>
+
+    <div class="nav" aria-hidden="true">
+      <button type="button" class="nav-btn" id="prev" aria-label="Página anterior">‹</button>
+      <button type="button" class="nav-btn" id="next" aria-label="Página siguiente">›</button>
     </div>
-    <div class="pills">
-      <span class="pill">IA</span>
-      <span class="pill">On-chain</span>
+
+    <div class="dots" id="dots" aria-label="Navegación de páginas">
+      <button type="button" class="dot is-active" data-page="0" aria-label="Página 1"></button>
+      <button type="button" class="dot" data-page="1" aria-label="Página 2"></button>
+      <button type="button" class="dot" data-page="2" aria-label="Página 3"></button>
     </div>
-    <span class="cta">Explorar</span>
-  </a>
+
+    <div class="hint">Desliza →</div>
+  </div>
+
+  <script>
+    (function () {
+      var track = document.getElementById('track');
+      var prev = document.getElementById('prev');
+      var next = document.getElementById('next');
+      var dots = Array.prototype.slice.call(document.querySelectorAll('.dot'));
+      var pageCount = 3;
+      var pageWidth = 728;
+
+      function currentPage() {
+        return Math.round(track.scrollLeft / pageWidth);
+      }
+
+      function goTo(page) {
+        var clamped = Math.max(0, Math.min(pageCount - 1, page));
+        track.scrollTo({ left: clamped * pageWidth, behavior: 'smooth' });
+      }
+
+      function syncUI() {
+        var page = currentPage();
+        dots.forEach(function (dot, index) {
+          dot.classList.toggle('is-active', index === page);
+        });
+        prev.disabled = page === 0;
+        next.disabled = page === pageCount - 1;
+      }
+
+      prev.addEventListener('click', function () { goTo(currentPage() - 1); });
+      next.addEventListener('click', function () { goTo(currentPage() + 1); });
+      dots.forEach(function (dot) {
+        dot.addEventListener('click', function () {
+          goTo(Number(dot.getAttribute('data-page')));
+        });
+      });
+      track.addEventListener('scroll', syncUI, { passive: true });
+      syncUI();
+    })();
+  </script>
 </body>
 </html>
