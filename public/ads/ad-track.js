@@ -62,6 +62,8 @@
   send("impression", {
     referrer: document.referrer || null,
     path: window.location.pathname,
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    locale: navigator.language || null,
   });
 
   document.addEventListener(
