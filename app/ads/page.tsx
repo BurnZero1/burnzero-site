@@ -22,12 +22,20 @@ export default function AdsPage() {
             </p>
             <p className="text-sm text-zinc-400 mt-1">FleetMagic embed units</p>
           </div>
-          <Link
-            href="/"
-            className="text-sm text-zinc-300 hover:text-white transition"
-          >
-            ← Volver al sitio
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/"
+              className="text-sm text-zinc-300 hover:text-white transition"
+            >
+              ← Volver al sitio
+            </Link>
+            <Link
+              href="/ads/analytics"
+              className="text-sm text-green-400 hover:text-green-300 transition"
+            >
+              Analytics →
+            </Link>
+          </div>
         </div>
       </header>
 
@@ -107,8 +115,12 @@ export default function AdsPage() {
           </ul>
           <p className="mt-4 text-zinc-400">
             The leaderboard unit is a 3-page horizontal scroll ad. The simple sidebar includes headline
-            and steps; the logo-only sidebar is just BurnZero branding. Use the iframe snippets inside
-            FleetMagic dashboard slots, or open the HTML URLs directly for screenshots.
+            and steps; the logo-only sidebar is just BurnZero branding. All units track impressions,
+            clicks, and engagement automatically — see{" "}
+            <Link href="/ads/analytics" className="text-green-400 hover:text-green-300">
+              ad analytics setup
+            </Link>
+            .
           </p>
         </section>
       </main>
