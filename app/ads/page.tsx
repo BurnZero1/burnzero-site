@@ -82,7 +82,7 @@ export default function AdsPage() {
           <p className="text-green-400 text-xs font-bold uppercase tracking-widest mb-2">
             Medium rectangle · 300 × 250
           </p>
-          <h2 className="text-2xl font-bold mb-6">Sidebar promo card (full)</h2>
+          <h2 className="text-2xl font-bold mb-6">Sidebar promo card (logo only)</h2>
           <div className="inline-block rounded-2xl border border-white/10 bg-zinc-950 p-4">
             <iframe
               src={SIDEBAR_SRC}
@@ -106,10 +106,9 @@ export default function AdsPage() {
             <li>https://www.burn-zero.com/ads/sidebar-300x250.html</li>
           </ul>
           <p className="mt-4 text-zinc-400">
-            The leaderboard unit is a 3-page horizontal scroll ad. The simple sidebar is a single-page
-            unit aligned with that messaging; the full sidebar links to the demo request flow. Use the
-            iframe snippets inside FleetMagic dashboard slots, or open the HTML URLs directly for
-            screenshots.
+            The leaderboard unit is a 3-page horizontal scroll ad. The simple sidebar includes headline
+            and steps; the logo-only sidebar is just BurnZero branding. Use the iframe snippets inside
+            FleetMagic dashboard slots, or open the HTML URLs directly for screenshots.
           </p>
         </section>
       </main>
