@@ -18,7 +18,9 @@ export default function RequestDemoPage() {
               />
             </div>
             <div>
-              <p className="text-2xl font-bold leading-none tracking-wide">Burn Zero</p>
+              <p className="text-2xl font-bold leading-none tracking-wide">
+                <span className="text-green-400">Burn</span>Zero
+              </p>
               <p className="mt-1 text-sm text-zinc-400">Conciliación de deuda de CO₂</p>
             </div>
           </Link>
