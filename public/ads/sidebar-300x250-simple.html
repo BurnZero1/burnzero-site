@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=300"/>
+  <title>Burn Zero — Medium Rectangle 300×250 (Simple)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 300px; height: 250px; overflow: hidden; }
+    body { font-family: Inter, system-ui, sans-serif; background: #0a0a0a; }
+
+    .ad {
+      width: 300px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      background: linear-gradient(160deg, #0a0a0a 0%, #142010 45%, #0a0a0a 100%);
+      border: 2px solid #5e8725;
+      text-decoration: none;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ad::after {
+      content: '';
+      position: absolute;
+      bottom: -50px;
+      right: -50px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(132, 180, 48, 0.2) 0%, transparent 68%);
+      pointer-events: none;
+    }
+
+    .top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo-main {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: #84b430;
+    }
+
+    .logo-main span { color: #fff; }
+
+    .badge {
+      font-size: 7px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 7px;
+      border-radius: 4px;
+      border: 1px solid #5e8725;
+      color: #84b430;
+      white-space: nowrap;
+    }
+
+    .headline {
+      margin-top: 14px;
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      position: relative;
+      z-index: 1;
+    }
+
+    .headline em {
+      font-style: normal;
+      color: #84b430;
+    }
+
+    .sub {
+      margin-top: 8px;
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 1.35;
+      color: #a1a1aa;
+      position: relative;
+      z-index: 1;
+    }
+
+    .steps {
+      margin-top: 14px;
+      display: grid;
+      gap: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 5px;
+      background: #84b430;
+      color: #0a0a0a;
+      font-size: 9px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .step-title {
+      font-size: 11px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .cta {
+      margin-top: auto;
+      display: block;
+      text-align: center;
+      padding: 11px 12px;
+      border-radius: 8px;
+      background: #84b430;
+      color: #0a0a0a;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 2px solid #84b430;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <a class="ad" href="https://www.burn-zero.com" target="_blank" rel="noopener noreferrer" aria-label="Burn Zero — conciliación de deuda de CO₂">
+    <div class="top">
+      <div class="logo-main">Burn<span>Zero</span></div>
+      <span class="badge">FleetMagic</span>
+    </div>
+    <div class="headline">Concilia tu <em>deuda de CO₂</em> con certificados verificados</div>
+    <div class="sub">via API · conciliacion AI · transparente, traseable, immutable</div>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <span class="step-title">Registra deuda CO₂</span>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <span class="step-title">Enlaza certificado</span>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <span class="step-title">Concilia en blockchain</span>
+      </div>
+    </div>
+    <span class="cta">Explorar</span>
+  </a>
+</body>
+</html>

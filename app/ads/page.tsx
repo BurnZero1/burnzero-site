@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 const LEADERBOARD_SRC = "/ads/leaderboard-728x90.html";
 const SIDEBAR_SRC = "/ads/sidebar-300x250.html";
+const SIDEBAR_SIMPLE_SRC = "/ads/sidebar-300x250-simple.html";
 
 export default function AdsPage() {
   return (
@@ -56,9 +57,32 @@ export default function AdsPage() {
 
         <section>
           <p className="text-green-400 text-xs font-bold uppercase tracking-widest mb-2">
+            Medium rectangle · 300 × 250 (simple)
+          </p>
+          <h2 className="text-2xl font-bold mb-2">Sidebar promo card — single page</h2>
+          <p className="text-sm text-zinc-400 mb-6">
+            Headline, short subline, 3 steps, and CTA. Matches the simplified leaderboard messaging.
+          </p>
+          <div className="inline-block rounded-2xl border border-white/10 bg-zinc-950 p-4">
+            <iframe
+              src={SIDEBAR_SIMPLE_SRC}
+              title="Burn Zero sidebar ad (simple)"
+              width={300}
+              height={250}
+              className="border-0 block"
+            />
+          </div>
+          <EmbedSnippet
+            label="Iframe embed"
+            code={`<iframe src="https://www.burn-zero.com${SIDEBAR_SIMPLE_SRC}" width="300" height="250" style="border:0;" title="Burn Zero"></iframe>`}
+          />
+        </section>
+
+        <section>
+          <p className="text-green-400 text-xs font-bold uppercase tracking-widest mb-2">
             Medium rectangle · 300 × 250
           </p>
-          <h2 className="text-2xl font-bold mb-6">Sidebar promo card</h2>
+          <h2 className="text-2xl font-bold mb-6">Sidebar promo card (full)</h2>
           <div className="inline-block rounded-2xl border border-white/10 bg-zinc-950 p-4">
             <iframe
               src={SIDEBAR_SRC}
@@ -78,12 +102,14 @@ export default function AdsPage() {
           <p className="font-semibold text-white mb-2">Direct asset URLs</p>
           <ul className="space-y-2 font-mono text-xs text-green-300">
             <li>https://www.burn-zero.com/ads/leaderboard-728x90.html</li>
+            <li>https://www.burn-zero.com/ads/sidebar-300x250-simple.html</li>
             <li>https://www.burn-zero.com/ads/sidebar-300x250.html</li>
           </ul>
           <p className="mt-4 text-zinc-400">
-            The leaderboard unit is a 3-page horizontal scroll ad; the sidebar links to the demo
-            request flow. Use the iframe snippets inside FleetMagic dashboard slots, or open the
-            HTML URLs directly for screenshots.
+            The leaderboard unit is a 3-page horizontal scroll ad. The simple sidebar is a single-page
+            unit aligned with that messaging; the full sidebar links to the demo request flow. Use the
+            iframe snippets inside FleetMagic dashboard slots, or open the HTML URLs directly for
+            screenshots.
           </p>
         </section>
       </main>
