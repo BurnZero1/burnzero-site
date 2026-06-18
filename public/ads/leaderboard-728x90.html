@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=728"/>
+  <title>Burn Zero — Leaderboard 728×90</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 728px; height: 90px; overflow: hidden; }
+    body { font-family: Inter, system-ui, sans-serif; background: #0a0a0a; }
+
+    .ad {
+      width: 728px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 0 20px;
+      background: linear-gradient(105deg, #0a0a0a 0%, #142010 55%, #0a0a0a 100%);
+      border: 2px solid #5e8725;
+      text-decoration: none;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ad::before {
+      content: '';
+      position: absolute;
+      right: -40px;
+      top: -30px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(132, 180, 48, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .logo {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .logo-main {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: #84b430;
+    }
+
+    .logo-main span { color: #fff; }
+
+    .logo-tag {
+      margin-top: 4px;
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #a1a1aa;
+    }
+
+    .copy {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .headline {
+      font-size: 15px;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .headline em {
+      font-style: normal;
+      color: #84b430;
+    }
+
+    .sub {
+      margin-top: 4px;
+      font-size: 10px;
+      font-weight: 600;
+      color: #a1a1aa;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .pills {
+      display: flex;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .pill {
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 8px;
+      border-radius: 4px;
+      border: 1px solid #4d6e1f;
+      color: #84b430;
+      background: rgba(132, 180, 48, 0.08);
+      white-space: nowrap;
+    }
+
+    .cta {
+      flex-shrink: 0;
+      padding: 10px 16px;
+      border-radius: 6px;
+      background: #84b430;
+      color: #0a0a0a;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: 2px solid #84b430;
+    }
+  </style>
+</head>
+<body>
+  <a class="ad" href="https://www.burn-zero.com/request-demo" target="_blank" rel="noopener noreferrer" aria-label="Burn Zero — conciliación de deuda de CO₂">
+    <div class="logo">
+      <div class="logo-main">Burn<span>Zero</span></div>
+      <div class="logo-tag">Add-on FleetMagic</div>
+    </div>
+    <div class="copy">
+      <div class="headline">Concilia tu <em>deuda de CO₂</em> con certificados verificados</div>
+      <div class="sub">CSV · IA · prueba on-chain auditable · PENDING → COMPLETED</div>
+    </div>
+    <div class="pills">
+      <span class="pill">IA</span>
+      <span class="pill">On-chain</span>
+    </div>
+    <span class="cta">Explorar</span>
+  </a>
+</body>
+</html>

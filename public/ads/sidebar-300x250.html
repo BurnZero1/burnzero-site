@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=300"/>
+  <title>Burn Zero — Medium Rectangle 300×250</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 300px; height: 250px; overflow: hidden; }
+    body { font-family: Inter, system-ui, sans-serif; background: #0a0a0a; }
+
+    .ad {
+      width: 300px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      background: linear-gradient(160deg, #0a0a0a 0%, #142010 45%, #0a0a0a 100%);
+      border: 2px solid #5e8725;
+      text-decoration: none;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ad::after {
+      content: '';
+      position: absolute;
+      bottom: -50px;
+      right: -50px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(132, 180, 48, 0.2) 0%, transparent 68%);
+      pointer-events: none;
+    }
+
+    .top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo-main {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: #84b430;
+    }
+
+    .logo-main span { color: #fff; }
+
+    .badge {
+      font-size: 7px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 7px;
+      border-radius: 4px;
+      border: 1px solid #5e8725;
+      color: #84b430;
+      white-space: nowrap;
+    }
+
+    .eyebrow {
+      margin-top: 10px;
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #84b430;
+      position: relative;
+      z-index: 1;
+    }
+
+    .headline {
+      margin-top: 6px;
+      font-size: 17px;
+      font-weight: 900;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      position: relative;
+      z-index: 1;
+    }
+
+    .features {
+      margin-top: 12px;
+      display: grid;
+      gap: 7px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      font-weight: 600;
+      color: #d4d4d8;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 2px;
+      background: #84b430;
+      flex-shrink: 0;
+      box-shadow: 0 0 6px rgba(132, 180, 48, 0.5);
+    }
+
+    .stats {
+      margin-top: auto;
+      display: flex;
+      gap: 8px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .stat {
+      flex: 1;
+      padding: 8px;
+      border-radius: 6px;
+      background: rgba(24, 24, 27, 0.9);
+      border: 1px solid #4d6e1f;
+      text-align: center;
+    }
+
+    .stat-val {
+      font-size: 14px;
+      font-weight: 900;
+      color: #84b430;
+      line-height: 1;
+    }
+
+    .stat-label {
+      margin-top: 3px;
+      font-size: 7px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #a1a1aa;
+    }
+
+    .cta {
+      margin-top: 10px;
+      display: block;
+      text-align: center;
+      padding: 11px 12px;
+      border-radius: 8px;
+      background: #84b430;
+      color: #0a0a0a;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 2px solid #84b430;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <a class="ad" href="https://www.burn-zero.com/request-demo" target="_blank" rel="noopener noreferrer" aria-label="Burn Zero — conciliación de deuda de CO₂">
+    <div class="top">
+      <div class="logo-main">Burn<span>Zero</span></div>
+      <span class="badge">FleetMagic</span>
+    </div>
+    <div class="eyebrow">Conciliación CO₂ verificada</div>
+    <div class="headline">Cierra la brecha entre emisiones y compensaciones</div>
+    <div class="features">
+      <div class="feature"><span class="dot"></span>Importa deuda desde CSV</div>
+      <div class="feature"><span class="dot"></span>Verifica certificados con IA</div>
+      <div class="feature"><span class="dot"></span>Auditoría inmutable on-chain</div>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-val">100%</div>
+        <div class="stat-label">Conciliación</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val">IA</div>
+        <div class="stat-label">Certificados</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val">ESG</div>
+        <div class="stat-label">Listo</div>
+      </div>
+    </div>
+    <span class="cta">Agendar demo</span>
+  </a>
+</body>
+</html>
