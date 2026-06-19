@@ -110,6 +110,26 @@ export default function AdAnalyticsPage() {
           </ul>
         </section>
 
+        <section className="rounded-2xl border border-white/10 bg-zinc-950 p-6 space-y-4">
+          <h2 className="text-lg font-semibold text-white">Segment by country</h2>
+          <ol className="list-decimal list-inside space-y-2">
+            <li>Go to <strong className="text-white">Insights → New insight → Trends</strong></li>
+            <li>Event: <code className="text-green-300">ad_engagement</code> or{" "}
+              <code className="text-green-300">ad_impression</code></li>
+            <li>Click <strong className="text-white">Breakdown</strong></li>
+            <li>
+              Choose <code className="text-green-300">Country</code>,{" "}
+              <code className="text-green-300">$geoip_country_name</code>, or{" "}
+              <code className="text-green-300">$geoip_country_code</code>
+            </li>
+            <li>Optionally add a filter on <code className="text-green-300">unit</code> for one ad format</li>
+          </ol>
+          <p>
+            Country is inferred from the viewer IP when events reach PostHog. Redeploy after the
+            latest tracking update so geo data is accurate.
+          </p>
+        </section>
+
         <section className="rounded-2xl border border-white/10 bg-zinc-950 p-6">
           <h2 className="text-lg font-semibold text-white mb-3">Local testing</h2>
           <p>
