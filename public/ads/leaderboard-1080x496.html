@@ -40,8 +40,7 @@
       scroll-snap-stop: always;
       display: flex;
       align-items: center;
-      gap: 21px;
-      padding: 0 27px;
+      padding: 0 48px;
       background: linear-gradient(105deg, #0a0a0a 0%, #142010 55%, #0a0a0a 100%);
       position: relative;
       overflow: hidden;
@@ -51,108 +50,71 @@
     .ad-page::before {
       content: '';
       position: absolute;
-      right: -59px;
-      top: -45px;
-      width: 237px;
-      height: 237px;
+      right: -80px;
+      top: -80px;
+      width: 320px;
+      height: 320px;
       border-radius: 50%;
       background: radial-gradient(circle, rgba(132, 180, 48, 0.18) 0%, transparent 70%);
       pointer-events: none;
     }
 
-    .logo {
-      flex-shrink: 0;
+    .page-1 {
+      justify-content: center;
+    }
+
+    .page-1-inner {
       display: flex;
       flex-direction: column;
-      line-height: 1;
+      align-items: center;
+      text-align: center;
+      gap: 28px;
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+    }
+
+    .logo-img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      border-radius: 28px;
     }
 
     .logo-main {
-      font-size: 33px;
+      font-size: 56px;
       font-weight: 900;
       letter-spacing: -0.03em;
+      line-height: 1;
       color: #84b430;
     }
 
     .logo-main span { color: #fff; }
 
-    .logo-tag {
-      margin-top: 6px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #a1a1aa;
-    }
-
-    .copy {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .headline {
-      font-size: 22px;
+    .page-1-headline {
+      font-size: 38px;
       font-weight: 900;
-      line-height: 1.15;
+      line-height: 1.2;
       letter-spacing: -0.02em;
+      color: #fff;
     }
 
-    .headline em {
+    .page-1-headline em {
       font-style: normal;
       color: #84b430;
     }
 
-    .sub {
-      margin-top: 6px;
-      font-size: 15px;
-      font-weight: 600;
-      color: #a1a1aa;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .pills {
-      display: flex;
-      gap: 9px;
-      flex-shrink: 0;
-    }
-
-    .pill {
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 7px 12px;
-      border-radius: 6px;
-      border: 1px solid #4d6e1f;
-      color: #84b430;
-      background: rgba(132, 180, 48, 0.08);
-      white-space: nowrap;
-    }
-
-    .cta {
-      flex-shrink: 0;
-      padding: 15px 24px;
-      border-radius: 9px;
-      background: #84b430;
-      color: #0a0a0a;
-      font-size: 15px;
-      font-weight: 900;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      border: 2px solid #84b430;
-      text-decoration: none;
-      white-space: nowrap;
+    .page-2 {
+      gap: 36px;
     }
 
     .page-2-intro {
       flex-shrink: 0;
-      width: 131px;
+      width: 220px;
     }
 
     .eyebrow {
-      font-size: 12px;
+      font-size: 18px;
       font-weight: 800;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -160,10 +122,10 @@
     }
 
     .page-2-title {
-      margin-top: 6px;
-      font-size: 15px;
+      margin-top: 12px;
+      font-size: 26px;
       font-weight: 700;
-      line-height: 1.2;
+      line-height: 1.25;
       color: #a1a1aa;
     }
 
@@ -171,60 +133,58 @@
       flex: 1;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 15px;
+      gap: 24px;
       min-width: 0;
+      position: relative;
+      z-index: 1;
     }
 
     .step {
       min-width: 0;
-      padding: 12px 15px;
-      border-radius: 9px;
+      padding: 28px 24px;
+      border-radius: 16px;
       border: 1px solid rgba(255, 255, 255, 0.08);
       background: rgba(255, 255, 255, 0.03);
       display: flex;
-      align-items: center;
-      gap: 12px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
     }
 
     .step-num {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 30px;
-      height: 30px;
-      border-radius: 7px;
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
       background: #84b430;
       color: #0a0a0a;
-      font-size: 12px;
+      font-size: 20px;
       font-weight: 900;
       flex-shrink: 0;
     }
 
     .step-title {
-      font-size: 16px;
+      font-size: 30px;
       font-weight: 800;
       line-height: 1.2;
     }
 
-    .page-3-copy {
-      flex: 1;
-      min-width: 0;
+    .page-3 {
+      justify-content: center;
     }
 
-    .page-3-headline {
-      font-size: 21px;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-    }
-
-    .page-3-headline span { color: #71717a; }
-
-    .page-3-sub {
-      margin-top: 6px;
-      font-size: 13px;
-      font-weight: 600;
-      color: #a1a1aa;
+    .page-3-text {
+      position: relative;
+      z-index: 1;
+      max-width: 920px;
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 1.45;
+      letter-spacing: -0.01em;
+      text-align: center;
+      color: #d4d4d8;
     }
 
     .nav {
@@ -234,18 +194,18 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 6px;
+      padding: 0 12px;
     }
 
     .nav-btn {
       pointer-events: auto;
-      width: 33px;
-      height: 33px;
+      width: 44px;
+      height: 44px;
       border: 1px solid rgba(132, 180, 48, 0.35);
       border-radius: 999px;
       background: rgba(10, 10, 10, 0.82);
       color: #84b430;
-      font-size: 18px;
+      font-size: 22px;
       line-height: 1;
       cursor: pointer;
       display: flex;
@@ -268,16 +228,16 @@
     .dots {
       position: absolute;
       left: 50%;
-      bottom: 15px;
+      bottom: 18px;
       transform: translateX(-50%);
       display: flex;
-      gap: 7px;
+      gap: 10px;
       pointer-events: auto;
     }
 
     .dot {
-      width: 9px;
-      height: 9px;
+      width: 10px;
+      height: 10px;
       border-radius: 999px;
       border: 0;
       padding: 0;
@@ -291,9 +251,9 @@
 
     .hint {
       position: absolute;
-      right: 15px;
-      bottom: 15px;
-      font-size: 10px;
+      right: 20px;
+      bottom: 18px;
+      font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -307,19 +267,11 @@
     <div class="ad-track" id="track" aria-label="Burn Zero — conciliación de deuda de CO₂">
       <!-- Page 1 -->
       <section class="ad-page page-1">
-        <div class="logo">
+        <div class="page-1-inner">
+          <img class="logo-img" src="https://www.burn-zero.com/logo.png" alt="" width="120" height="120"/>
           <div class="logo-main">Burn<span>Zero</span></div>
-          <div class="logo-tag">Add-on FleetMagic</div>
+          <div class="page-1-headline">Concilia tu <em>deuda de CO₂</em> con certificados verificados</div>
         </div>
-        <div class="copy">
-          <div class="headline">Concilia tu <em>deuda de CO₂</em> con certificados verificados</div>
-          <div class="sub">via API · conciliacion AI · prueba on-chain auditable · transparente, traseable, immutable</div>
-        </div>
-        <div class="pills">
-          <span class="pill">IA</span>
-          <span class="pill">On-chain</span>
-        </div>
-        <a class="cta" href="https://www.burn-zero.com" target="_blank" rel="noopener noreferrer">Explorar</a>
       </section>
 
       <!-- Page 2: Cómo funciona -->
@@ -346,18 +298,9 @@
 
       <!-- Page 3 -->
       <section class="ad-page page-3">
-        <div class="logo">
-          <div class="logo-main">Burn<span>Zero</span></div>
-          <div class="logo-tag">Verificación end-to-end</div>
-        </div>
-        <div class="page-3-copy">
-          <div class="page-3-headline">
-            Conciliación con certificados verificados
-            <span> de principio a fin.</span>
-          </div>
-          <div class="page-3-sub">Registro · verificación con IA · cierre on-chain auditable</div>
-        </div>
-        <a class="cta" href="https://www.burn-zero.com/#how-it-works" target="_blank" rel="noopener noreferrer">Cómo funciona</a>
+        <p class="page-3-text">
+          via API · conciliacion AI · prueba on-chain auditable · transparente, trazable, immutable
+        </p>
       </section>
     </div>
 
