@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=1080"/>
+  <title>Burn Zero — Leaderboard 1080×496</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 1080px; height: 496px; overflow: hidden; }
+    body { font-family: Inter, system-ui, sans-serif; background: #0a0a0a; }
+
+    .ad-shell {
+      width: 1080px;
+      height: 496px;
+      position: relative;
+      border: 3px solid #5e8725;
+      background: #0a0a0a;
+    }
+
+    .ad-track {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .ad-track::-webkit-scrollbar { display: none; }
+
+    .ad-page {
+      flex: 0 0 1080px;
+      width: 1080px;
+      height: 496px;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      display: flex;
+      align-items: center;
+      gap: 21px;
+      padding: 0 27px;
+      background: linear-gradient(105deg, #0a0a0a 0%, #142010 55%, #0a0a0a 100%);
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    .ad-page::before {
+      content: '';
+      position: absolute;
+      right: -59px;
+      top: -45px;
+      width: 237px;
+      height: 237px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(132, 180, 48, 0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .logo {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .logo-main {
+      font-size: 33px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: #84b430;
+    }
+
+    .logo-main span { color: #fff; }
+
+    .logo-tag {
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #a1a1aa;
+    }
+
+    .copy {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .headline {
+      font-size: 22px;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .headline em {
+      font-style: normal;
+      color: #84b430;
+    }
+
+    .sub {
+      margin-top: 6px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #a1a1aa;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .pills {
+      display: flex;
+      gap: 9px;
+      flex-shrink: 0;
+    }
+
+    .pill {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 7px 12px;
+      border-radius: 6px;
+      border: 1px solid #4d6e1f;
+      color: #84b430;
+      background: rgba(132, 180, 48, 0.08);
+      white-space: nowrap;
+    }
+
+    .cta {
+      flex-shrink: 0;
+      padding: 15px 24px;
+      border-radius: 9px;
+      background: #84b430;
+      color: #0a0a0a;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: 2px solid #84b430;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .page-2-intro {
+      flex-shrink: 0;
+      width: 131px;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #84b430;
+    }
+
+    .page-2-title {
+      margin-top: 6px;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #a1a1aa;
+    }
+
+    .steps {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 15px;
+      min-width: 0;
+    }
+
+    .step {
+      min-width: 0;
+      padding: 12px 15px;
+      border-radius: 9px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 7px;
+      background: #84b430;
+      color: #0a0a0a;
+      font-size: 12px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .step-title {
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .page-3-copy {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .page-3-headline {
+      font-size: 21px;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .page-3-headline span { color: #71717a; }
+
+    .page-3-sub {
+      margin-top: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #a1a1aa;
+    }
+
+    .nav {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6px;
+    }
+
+    .nav-btn {
+      pointer-events: auto;
+      width: 33px;
+      height: 33px;
+      border: 1px solid rgba(132, 180, 48, 0.35);
+      border-radius: 999px;
+      background: rgba(10, 10, 10, 0.82);
+      color: #84b430;
+      font-size: 18px;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .ad-shell:hover .nav-btn,
+    .ad-shell:focus-within .nav-btn {
+      opacity: 1;
+    }
+
+    .nav-btn:disabled {
+      opacity: 0.25 !important;
+      cursor: default;
+    }
+
+    .dots {
+      position: absolute;
+      left: 50%;
+      bottom: 15px;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 7px;
+      pointer-events: auto;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      border: 0;
+      padding: 0;
+      background: rgba(255, 255, 255, 0.25);
+      cursor: pointer;
+    }
+
+    .dot.is-active {
+      background: #84b430;
+    }
+
+    .hint {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #71717a;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body data-ad-unit="leaderboard-1080x496">
+  <div class="ad-shell">
+    <div class="ad-track" id="track" aria-label="Burn Zero — conciliación de deuda de CO₂">
+      <!-- Page 1 -->
+      <section class="ad-page page-1">
+        <div class="logo">
+          <div class="logo-main">Burn<span>Zero</span></div>
+          <div class="logo-tag">Add-on FleetMagic</div>
+        </div>
+        <div class="copy">
+          <div class="headline">Concilia tu <em>deuda de CO₂</em> con certificados verificados</div>
+          <div class="sub">via API · conciliacion AI · prueba on-chain auditable · transparente, traseable, immutable</div>
+        </div>
+        <div class="pills">
+          <span class="pill">IA</span>
+          <span class="pill">On-chain</span>
+        </div>
+        <a class="cta" href="https://www.burn-zero.com" target="_blank" rel="noopener noreferrer">Explorar</a>
+      </section>
+
+      <!-- Page 2: Cómo funciona -->
+      <section class="ad-page page-2">
+        <div class="page-2-intro">
+          <div class="eyebrow">Cómo funciona</div>
+          <div class="page-2-title">De principio a fin</div>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <div class="step-num">01</div>
+            <div class="step-title">Registra deuda CO₂</div>
+          </article>
+          <article class="step">
+            <div class="step-num">02</div>
+            <div class="step-title">Enlaza certificado</div>
+          </article>
+          <article class="step">
+            <div class="step-num">03</div>
+            <div class="step-title">Concilia en blockchain</div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Page 3 -->
+      <section class="ad-page page-3">
+        <div class="logo">
+          <div class="logo-main">Burn<span>Zero</span></div>
+          <div class="logo-tag">Verificación end-to-end</div>
+        </div>
+        <div class="page-3-copy">
+          <div class="page-3-headline">
+            Conciliación con certificados verificados
+            <span> de principio a fin.</span>
+          </div>
+          <div class="page-3-sub">Registro · verificación con IA · cierre on-chain auditable</div>
+        </div>
+        <a class="cta" href="https://www.burn-zero.com/#how-it-works" target="_blank" rel="noopener noreferrer">Cómo funciona</a>
+      </section>
+    </div>
+
+    <div class="nav" aria-hidden="true">
+      <button type="button" class="nav-btn" id="prev" aria-label="Página anterior">‹</button>
+      <button type="button" class="nav-btn" id="next" aria-label="Página siguiente">›</button>
+    </div>
+
+    <div class="dots" id="dots" aria-label="Navegación de páginas">
+      <button type="button" class="dot is-active" data-page="0" aria-label="Página 1"></button>
+      <button type="button" class="dot" data-page="1" aria-label="Página 2"></button>
+      <button type="button" class="dot" data-page="2" aria-label="Página 3"></button>
+    </div>
+
+    <div class="hint">Desliza →</div>
+  </div>
+
+  <script>
+    (function () {
+      var track = document.getElementById('track');
+      var prev = document.getElementById('prev');
+      var next = document.getElementById('next');
+      var dots = Array.prototype.slice.call(document.querySelectorAll('.dot'));
+      var pageCount = 3;
+      var pageWidth = 1080;
+
+      function currentPage() {
+        return Math.round(track.scrollLeft / pageWidth);
+      }
+
+      function goTo(page) {
+        var clamped = Math.max(0, Math.min(pageCount - 1, page));
+        track.scrollTo({ left: clamped * pageWidth, behavior: 'smooth' });
+      }
+
+      function syncUI() {
+        var page = currentPage();
+        dots.forEach(function (dot, index) {
+          dot.classList.toggle('is-active', index === page);
+        });
+        prev.disabled = page === 0;
+        next.disabled = page === pageCount - 1;
+      }
+
+      prev.addEventListener('click', function () { goTo(currentPage() - 1); });
+      next.addEventListener('click', function () { goTo(currentPage() + 1); });
+      dots.forEach(function (dot) {
+        dot.addEventListener('click', function () {
+          goTo(Number(dot.getAttribute('data-page')));
+        });
+      });
+      track.addEventListener('scroll', syncUI, { passive: true });
+      syncUI();
+    })();
+  </script>
+  <script src="/ads/ad-track.js" defer></script>
+</body>
+</html>

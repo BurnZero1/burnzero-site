@@ -1,5 +1,6 @@
 export const AD_UNITS = [
   "leaderboard-728x90",
+  "leaderboard-1080x496",
   "sidebar-300x250",
   "sidebar-300x250-simple",
 ] as const;

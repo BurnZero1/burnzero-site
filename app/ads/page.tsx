@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 };
 
 const LEADERBOARD_SRC = "/ads/leaderboard-728x90.html";
+const LEADERBOARD_LARGE_SRC = "/ads/leaderboard-1080x496.html";
 const SIDEBAR_SRC = "/ads/sidebar-300x250.html";
 const SIDEBAR_SIMPLE_SRC = "/ads/sidebar-300x250-simple.html";
 
@@ -65,6 +66,29 @@ export default function AdsPage() {
 
         <section>
           <p className="text-green-400 text-xs font-bold uppercase tracking-widest mb-2">
+            Large banner · 1080 × 496
+          </p>
+          <h2 className="text-2xl font-bold mb-2">Leaderboard — large format</h2>
+          <p className="text-sm text-zinc-400 mb-6">
+            Same 3-page ad as the 728×90 unit, scaled for 1080×496 slots.
+          </p>
+          <div className="overflow-x-auto rounded-2xl border border-white/10 bg-zinc-950 p-4">
+            <iframe
+              src={LEADERBOARD_LARGE_SRC}
+              title="Burn Zero leaderboard ad 1080x496"
+              width={1080}
+              height={496}
+              className="border-0 block max-w-none"
+            />
+          </div>
+          <EmbedSnippet
+            label="Iframe embed"
+            code={`<iframe src="https://www.burn-zero.com${LEADERBOARD_LARGE_SRC}" width="1080" height="496" style="border:0;" title="Burn Zero"></iframe>`}
+          />
+        </section>
+
+        <section>
+          <p className="text-green-400 text-xs font-bold uppercase tracking-widest mb-2">
             Medium rectangle · 300 × 250 (simple)
           </p>
           <h2 className="text-2xl font-bold mb-2">Sidebar promo card — single page</h2>
@@ -110,6 +134,7 @@ export default function AdsPage() {
           <p className="font-semibold text-white mb-2">Direct asset URLs</p>
           <ul className="space-y-2 font-mono text-xs text-green-300">
             <li>https://www.burn-zero.com/ads/leaderboard-728x90.html</li>
+            <li>https://www.burn-zero.com/ads/leaderboard-1080x496.html</li>
             <li>https://www.burn-zero.com/ads/sidebar-300x250-simple.html</li>
             <li>https://www.burn-zero.com/ads/sidebar-300x250.html</li>
           </ul>
