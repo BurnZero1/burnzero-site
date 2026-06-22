@@ -267,7 +267,7 @@ export default function BurnZeroLandingPage() {
                 <p className="text-zinc-400 text-sm mb-4">Arquitectura lista para empresas</p>
 
                 <div className="flex flex-wrap gap-3">
-                  {['Importación CSV', 'Certificados PDF', 'Conciliación IA', 'Registro on-chain', 'Reportes ESG'].map((tag) => (
+                  {['Importación vía API', 'Certificados PDF', 'Conciliación IA', 'Registro on-chain', 'Reportes ESG'].map((tag) => (
                     <div
                       key={tag}
                       className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-sm"
