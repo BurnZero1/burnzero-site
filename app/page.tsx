@@ -239,7 +239,7 @@ export default function BurnZeroLandingPage() {
                 'Verificación automática de certificados de compensación con IA',
                 'Conciliación deuda vs. compensación por empresa y toneladas',
                 'Ciclo de vida PENDING → COMPLETED con prueba de offset en blockchain',
-                'Registro inmutable en Ethereum para auditorías ESG',
+                'Registro inmutable en Polygon para auditorías ESG',
                 'Panel de deuda pendiente y estado de conciliación por empresa',
                 'API e integraciones para sistemas de reporte y cumplimiento',
               ].map((feature) => (
