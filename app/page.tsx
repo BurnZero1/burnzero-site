@@ -139,19 +139,13 @@ export default function BurnZeroLandingPage() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-4">
                   <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
                     <p className="text-zinc-400 text-sm">Deuda conciliada este mes</p>
                     <h3 className="text-3xl font-bold mt-2">6,930T</h3>
                     <div className="mt-4 h-2 bg-white/10 rounded-full overflow-hidden">
                       <div className="w-full h-full bg-green-400 rounded-full" />
                     </div>
-                  </div>
-
-                  <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
-                    <p className="text-zinc-400 text-sm">Certificados verificados</p>
-                    <h3 className="text-3xl font-bold mt-2">12</h3>
-                    <p className="text-green-400 text-sm mt-4">3 empresas conciliadas</p>
                   </div>
                 </div>
               </div>
