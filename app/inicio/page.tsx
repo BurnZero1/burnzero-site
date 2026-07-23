@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import "../brand-theme.css";
 
 export const metadata: Metadata = {
   title: "BurnZero — Cumplimiento de CO₂ con prueba on-chain",
@@ -104,9 +105,9 @@ const tags = [
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-zinc-950 text-white">
+    <div className="min-h-screen bg-page text-white">
       {/* Nav */}
-      <nav className="fixed top-0 inset-x-0 z-50 border-b border-white/10 bg-zinc-950/80 backdrop-blur-md">
+      <nav className="fixed top-0 inset-x-0 z-50 border-b border-white/10 bg-page-nav backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <Link href="/" className="flex items-center gap-3">
             <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl bg-zinc-900">
@@ -159,7 +160,7 @@ export default function HomePage() {
       <main>
         {/* Hero — one composition */}
         <section className="relative overflow-hidden px-4 pb-16 pt-28 sm:px-6 sm:pt-32 lg:pb-24">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(132,180,48,0.16),transparent_55%),radial-gradient(ellipse_at_bottom_left,rgba(24,24,27,0.9),transparent_50%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(132,180,48,0.16),transparent_55%),radial-gradient(ellipse_at_bottom_left,rgba(20,26,32,0.85),transparent_50%)]" />
           <div className="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <div>
               <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-green-400/30 bg-green-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-green-400">
@@ -246,7 +247,7 @@ export default function HomePage() {
                       (label) => (
                         <span
                           key={label}
-                          className="rounded-full border border-white/10 bg-zinc-950/60 px-3 py-1 text-xs text-zinc-300"
+                          className="rounded-full border border-white/10 bg-[#141a20]/80 px-3 py-1 text-xs text-zinc-300"
                         >
                           {label}
                         </span>
@@ -283,7 +284,7 @@ export default function HomePage() {
         {/* Problem → solution */}
         <section
           id="problema"
-          className="scroll-mt-24 border-t border-white/10 bg-zinc-900/40 px-4 py-16 sm:px-6"
+          className="scroll-mt-24 border-t border-white/10 bg-[#141a20]/45 px-4 py-16 sm:px-6"
         >
           <div className="mx-auto max-w-6xl">
             <div className="max-w-2xl">
@@ -347,7 +348,7 @@ export default function HomePage() {
               {steps.map((step) => (
                 <div
                   key={step.n}
-                  className="rounded-3xl border border-white/10 bg-zinc-900/50 p-6 transition hover:border-green-400/30"
+                  className="rounded-3xl border border-white/10 bg-[#222a33]/70 p-6 transition hover:border-green-400/30"
                 >
                   <p className="text-sm font-bold text-green-400">{step.n}</p>
                   <h3 className="mt-3 text-xl font-semibold">{step.title}</h3>
@@ -363,7 +364,7 @@ export default function HomePage() {
         {/* Platform */}
         <section
           id="plataforma"
-          className="scroll-mt-24 border-t border-white/10 bg-zinc-900/40 px-4 py-16 sm:px-6"
+          className="scroll-mt-24 border-t border-white/10 bg-[#141a20]/45 px-4 py-16 sm:px-6"
         >
           <div className="mx-auto max-w-6xl">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
@@ -396,7 +397,7 @@ export default function HomePage() {
               {platformFeatures.map((feature) => (
                 <div
                   key={feature.title}
-                  className="rounded-3xl border border-white/10 bg-zinc-950/60 p-6 transition hover:border-white/20"
+                  className="rounded-3xl border border-white/10 bg-[#141a20]/70 p-6 transition hover:border-white/20"
                 >
                   <h3 className="text-lg font-semibold">{feature.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-zinc-400">
@@ -427,7 +428,7 @@ export default function HomePage() {
               {audiences.map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-3xl border border-white/10 bg-zinc-900/50 p-6 transition hover:border-green-400/25"
+                  className="rounded-3xl border border-white/10 bg-[#222a33]/70 p-6 transition hover:border-green-400/25"
                 >
                   <h3 className="text-xl font-semibold text-green-400">
                     {item.title}
@@ -443,7 +444,7 @@ export default function HomePage() {
 
         {/* Final CTA */}
         <section className="border-t border-white/10 px-4 py-20 sm:px-6">
-          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-[2rem] border border-green-400/20 bg-gradient-to-br from-zinc-900 via-zinc-950 to-zinc-900 px-6 py-14 text-center sm:px-12">
+          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-[2rem] border border-green-400/20 bg-gradient-to-br from-[#222a33] via-[#1a2128] to-[#222a33] px-6 py-14 text-center sm:px-12">
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(132,180,48,0.12),transparent_65%)]" />
             <div className="relative">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">

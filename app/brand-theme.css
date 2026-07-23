@@ -1,0 +1,43 @@
+/* Shared marketing page surface (product login reference: #1a2128) */
+:root {
+  --background: #1a2128;
+  --page-bg: #1a2128;
+  --page-bg-elevated: #222a33;
+  --page-bg-sunken: #141a20;
+}
+
+.bg-page {
+  background-color: var(--page-bg);
+}
+
+.bg-page-nav {
+  background-color: color-mix(in srgb, var(--page-bg) 70%, transparent);
+}
+
+.bg-page-elevated {
+  background-color: var(--page-bg-elevated);
+}
+
+.bg-page-sunken {
+  background-color: var(--page-bg-sunken);
+}
+
+/*
+ * Remap legacy near-black utilities (TCC-locked pages like request-demo
+ * may still ship bg-black / bg-zinc-950).
+ */
+.bg-black,
+.bg-zinc-950 {
+  background-color: var(--page-bg) !important;
+}
+
+.bg-black\/70,
+.bg-black\/80,
+.bg-zinc-950\/70,
+.bg-zinc-950\/80 {
+  background-color: color-mix(in srgb, var(--page-bg) 70%, transparent) !important;
+}
+
+.bg-zinc-950\/60 {
+  background-color: color-mix(in srgb, var(--page-bg-sunken) 80%, transparent) !important;
+}
