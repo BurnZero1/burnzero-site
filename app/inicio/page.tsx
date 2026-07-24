@@ -112,8 +112,8 @@ export default function HomePage() {
           <Link href="/" className="flex items-center gap-3">
             <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl bg-zinc-900">
               <img
-                src="/logo.png"
-                alt="BurnZero"
+                src="/brand-logo.png"
+                alt="Logo de BurnZero — hoja verde conectada a bloques en cadena"
                 className="h-14 w-14 object-contain"
               />
             </div>
@@ -470,8 +470,8 @@ export default function HomePage() {
           <div className="flex items-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl bg-zinc-900">
               <img
-                src="/logo.png"
-                alt="BurnZero"
+                src="/brand-logo.png"
+                alt="Logo de BurnZero — hoja verde conectada a bloques en cadena"
                 className="h-10 w-10 object-contain"
               />
             </div>
