@@ -234,7 +234,9 @@ export default function HomePage() {
                         </p>
                       </div>
                       <a
-                        href="#plataforma"
+                        href="https://sepolia.etherscan.io/tx/0x529f6cd24d243b1b5fd1ac73d501ca6222a716ab62f88784606074a4040f309b#eventlog"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="shrink-0 text-xs font-semibold text-green-400 transition hover:text-green-300"
                       >
                         Ver tx →
