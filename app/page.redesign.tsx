@@ -167,8 +167,7 @@ export default function HomePage() {
                 Cumplimiento · Costa Rica · B2B
               </p>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
-                Del certificado a la compensación.{" "}
-                <span className="text-green-400">Con prueba.</span>
+                Cierra la brecha entre tu deuda de carbono y tus compensaciones
               </h1>
               <p className="mt-5 max-w-xl text-lg leading-relaxed text-zinc-300">
                 BurnZero conecta registros de emisiones de CO₂ con certificados
