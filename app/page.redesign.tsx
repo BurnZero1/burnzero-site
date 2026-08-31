@@ -142,7 +142,7 @@ export default function HomePage() {
             </a>
             <Link
               href="/request-demo"
-              className="rounded-full bg-green-400 px-4 py-2 font-semibold text-zinc-950 transition hover:bg-green-300"
+              className="rounded-full bg-zinc-600 px-4 py-2 font-semibold text-white transition hover:bg-zinc-500"
             >
               Solicitar demo
             </Link>
@@ -150,7 +150,7 @@ export default function HomePage() {
 
           <Link
             href="/request-demo"
-            className="rounded-full bg-green-400 px-4 py-2 text-sm font-semibold text-zinc-950 transition hover:bg-green-300 md:hidden"
+            className="rounded-full bg-zinc-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-zinc-500 md:hidden"
           >
             Demo
           </Link>
