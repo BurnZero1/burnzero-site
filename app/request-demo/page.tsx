@@ -1,9 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
+import SiteFooter from "../components/SiteFooter";
+import { pageMetadata, publicPages } from "@/lib/site";
 import DemoRequestForm from "./DemoRequestForm";
+
+const demo = publicPages.find((page) => page.path === "/request-demo")!;
+
+export const metadata = pageMetadata({
+  title: demo.title,
+  description: demo.description,
+  path: demo.path,
+});
 
 export default function RequestDemoPage() {
   return (
+    <>
     <main className="min-h-screen bg-black px-6 py-10 text-white">
       <div className="mx-auto flex max-w-6xl flex-col gap-16">
         <nav className="flex items-center justify-between">
@@ -52,5 +63,7 @@ export default function RequestDemoPage() {
         </section>
       </div>
     </main>
+    <SiteFooter />
+    </>
   );
 }

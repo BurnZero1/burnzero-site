@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Burn Zero — Ad analytics",
   description: "How to track impressions, clicks, and engagement for Burn Zero FleetMagic ad units.",
-  robots: { index: false, follow: false },
-};
+  path: "/ads/analytics",
+  index: false,
+});
 
 export default function AdAnalyticsPage() {
   return (

@@ -1,0 +1,20 @@
+# BurnZero
+
+BurnZero es una plataforma B2B de cumplimiento ambiental en Costa Rica. Conecta registros de emisiones de CO₂ con certificados oficiales (FONAFIFO), conciliación automática, evidencia en PDF y prueba on-chain. No es un marketplace de carbono.
+
+Está dirigida a equipos de sostenibilidad / ESG, finanzas / compliance, operaciones y flotas, y a organizaciones enterprise.
+
+## Páginas
+
+- Inicio: https://www.burn-zero.com
+- Solicitar demo: https://www.burn-zero.com/request-demo
+
+## Contacto
+
+- Correo: chamorro@burn-zero.com
+- Ubicación: Costa Rica (TODO: ciudad)
+- Formulario: https://www.burn-zero.com/request-demo
+
+## Idioma
+
+- El sitio está en español (`es`). No hay versión en inglés publicada.

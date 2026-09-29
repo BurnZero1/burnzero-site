@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Burn Zero — FleetMagic ad units",
   description: "Embeddable Burn Zero promo banners for FleetMagic dashboard integration.",
-  robots: { index: false, follow: false },
-};
+  path: "/ads",
+  index: false,
+});
 
 const LEADERBOARD_SRC = "/ads/leaderboard-728x90.html";
 const LEADERBOARD_LARGE_SRC = "/ads/leaderboard-1080x496.html";
