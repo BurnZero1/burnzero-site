@@ -18,9 +18,9 @@ export default function RequestDemoPage() {
     <>
       <main className="min-h-screen bg-page px-4 py-6 text-[#f3f4f4] sm:px-6">
         <div className="mx-auto flex max-w-6xl flex-col gap-14">
-          <nav className="flex h-14 items-center justify-between border-b border-white/[0.08]">
-            <Link href="/" className="flex items-center gap-2.5">
-              <span className="relative h-7 w-7 overflow-hidden">
+          <nav className="flex h-[4.25rem] items-center justify-between border-b border-white/[0.08] sm:h-20">
+            <Link href="/" className="flex items-center gap-3">
+              <span className="relative h-10 w-10 overflow-hidden sm:h-12 sm:w-12">
                 <Image
                   src="/logo.png"
                   alt="BurnZero"
@@ -29,7 +29,7 @@ export default function RequestDemoPage() {
                   priority
                 />
               </span>
-              <span className="text-[15px] font-medium tracking-tight">
+              <span className="text-xl font-semibold tracking-tight sm:text-[1.75rem]">
                 <span className="text-[#84b430]">Burn</span>Zero
               </span>
             </Link>

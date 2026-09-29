@@ -4,7 +4,7 @@ export default function FaqSection() {
   return (
     <section
       id="preguntas"
-      className="scroll-mt-16 border-t border-white/[0.08] bg-[#151b1f] px-4 py-16 sm:px-6 lg:py-20"
+      className="scroll-mt-24 border-t border-white/[0.08] bg-[#151b1f] px-4 py-16 sm:px-6 lg:py-20"
     >
       <script
         type="application/ld+json"

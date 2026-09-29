@@ -348,31 +348,31 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-page text-[#f3f4f4]">
       <header className="sticky top-0 z-50 border-b border-white/[0.08] bg-page-nav">
-        <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-          <Link href="/" className="flex items-center gap-2.5">
+        <div className="mx-auto flex h-[4.25rem] max-w-6xl items-center justify-between gap-4 px-4 sm:h-20 sm:px-6">
+          <Link href="/" className="flex shrink-0 items-center gap-3">
             <img
               src="/brand-logo.png"
               alt="BurnZero"
-              className="h-7 w-7 object-contain"
+              className="h-10 w-10 object-contain sm:h-12 sm:w-12"
             />
-            <span className="text-[15px] font-medium tracking-tight">
+            <span className="text-xl font-semibold tracking-tight sm:text-[1.75rem]">
               <span className="text-[#84b430]">Burn</span>Zero
             </span>
           </Link>
 
-          <nav className="hidden items-center gap-6 text-[13px] text-[#9aa1a6] md:flex">
+          <nav className="hidden items-center gap-4 text-[13px] text-[#9aa1a6] md:flex lg:gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="transition hover:text-[#f3f4f4]"
+                className="whitespace-nowrap transition hover:text-[#f3f4f4]"
               >
                 {link.label}
               </a>
             ))}
             <Link
               href="/request-demo"
-              className="rounded-md bg-[#84b430] px-3 py-1.5 text-[13px] font-medium text-[#11171b] transition hover:bg-[#93c23a]"
+              className="whitespace-nowrap rounded-md bg-[#84b430] px-3 py-1.5 text-[13px] font-medium text-[#11171b] transition hover:bg-[#93c23a]"
             >
               Solicitar demo
             </Link>
@@ -381,7 +381,7 @@ export default function HomePage() {
           <div className="flex items-center gap-3 md:hidden">
             <Link
               href="/request-demo"
-              className="rounded-md bg-[#84b430] px-3 py-1.5 text-[13px] font-medium text-[#11171b]"
+              className="whitespace-nowrap rounded-md bg-[#84b430] px-3 py-1.5 text-[13px] font-medium text-[#11171b]"
             >
               Solicitar demo
             </Link>
@@ -481,7 +481,7 @@ export default function HomePage() {
 
         <section
           id="problema"
-          className="scroll-mt-16 border-t border-white/[0.08] bg-[#151b1f] px-4 py-16 sm:px-6 lg:py-20"
+          className="scroll-mt-24 border-t border-white/[0.08] bg-[#151b1f] px-4 py-16 sm:px-6 lg:py-20"
         >
           <div className="mx-auto max-w-6xl">
             <div className="max-w-2xl">
@@ -518,7 +518,7 @@ export default function HomePage() {
 
         <section
           id="como-funciona"
-          className="scroll-mt-16 border-t border-white/[0.08] px-4 py-16 sm:px-6 lg:py-20"
+          className="scroll-mt-24 border-t border-white/[0.08] px-4 py-16 sm:px-6 lg:py-20"
         >
           <div className="mx-auto max-w-6xl">
             <div className="max-w-2xl">
@@ -549,7 +549,7 @@ export default function HomePage() {
 
         <section
           id="plataforma"
-          className="scroll-mt-16 border-t border-white/[0.08] bg-[#151b1f] px-4 py-16 sm:px-6 lg:py-20"
+          className="scroll-mt-24 border-t border-white/[0.08] bg-[#151b1f] px-4 py-16 sm:px-6 lg:py-20"
         >
           <div className="mx-auto max-w-6xl">
             <div className="max-w-2xl">
@@ -583,7 +583,7 @@ export default function HomePage() {
 
         <section
           id="audiencias"
-          className="scroll-mt-16 border-t border-white/[0.08] px-4 py-16 sm:px-6 lg:py-20"
+          className="scroll-mt-24 border-t border-white/[0.08] px-4 py-16 sm:px-6 lg:py-20"
         >
           <div className="mx-auto max-w-6xl">
             <div className="max-w-2xl">
