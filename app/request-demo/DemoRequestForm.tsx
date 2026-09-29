@@ -49,9 +49,9 @@ export default function DemoRequestForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mt-10 space-y-6">
+    <form onSubmit={handleSubmit} className="mt-6 space-y-4">
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-zinc-300">
+        <label htmlFor="name" className="block text-[13px] font-medium text-[#9aa1a6]">
           Nombre
         </label>
         <input
@@ -60,13 +60,13 @@ export default function DemoRequestForm() {
           type="text"
           required
           autoComplete="name"
-          className="mt-2 w-full rounded-2xl border border-white/10 bg-black/50 px-5 py-4 text-white outline-none transition placeholder:text-zinc-600 focus:border-green-400"
-          placeholder="Tu nombre"
+          className="mt-1.5 w-full rounded-md border border-white/[0.08] bg-[#11171b] px-3 py-2.5 text-[15px] text-[#f3f4f4] outline-none transition placeholder:text-[#6f777c] focus:border-[#84b430]"
+          placeholder="Su nombre"
         />
       </div>
 
       <div>
-        <label htmlFor="company" className="block text-sm font-medium text-zinc-300">
+        <label htmlFor="company" className="block text-[13px] font-medium text-[#9aa1a6]">
           Empresa
         </label>
         <input
@@ -75,13 +75,13 @@ export default function DemoRequestForm() {
           type="text"
           required
           autoComplete="organization"
-          className="mt-2 w-full rounded-2xl border border-white/10 bg-black/50 px-5 py-4 text-white outline-none transition placeholder:text-zinc-600 focus:border-green-400"
+          className="mt-1.5 w-full rounded-md border border-white/[0.08] bg-[#11171b] px-3 py-2.5 text-[15px] text-[#f3f4f4] outline-none transition placeholder:text-[#6f777c] focus:border-[#84b430]"
           placeholder="Nombre de la empresa"
         />
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-zinc-300">
+        <label htmlFor="message" className="block text-[13px] font-medium text-[#9aa1a6]">
           Mensaje
         </label>
         <textarea
@@ -89,15 +89,15 @@ export default function DemoRequestForm() {
           name="message"
           required
           rows={6}
-          className="mt-2 w-full resize-none rounded-2xl border border-white/10 bg-black/50 px-5 py-4 text-white outline-none transition placeholder:text-zinc-600 focus:border-green-400"
-          placeholder="Cuéntanos sobre tu volumen de deuda de CO₂, certificados de compensación o necesidades de conciliación"
+          className="mt-1.5 w-full resize-none rounded-md border border-white/[0.08] bg-[#11171b] px-3 py-2.5 text-[15px] text-[#f3f4f4] outline-none transition placeholder:text-[#6f777c] focus:border-[#84b430]"
+          placeholder="Volumen de deuda de CO₂, certificados FONAFIFO o necesidades de conciliación"
         />
       </div>
 
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="w-full rounded-2xl bg-green-400 px-7 py-4 font-semibold text-black transition hover:scale-[1.01] disabled:cursor-not-allowed disabled:opacity-60"
+        className="w-full rounded-md bg-[#84b430] px-4 py-2.5 text-[15px] font-medium text-[#11171b] transition hover:bg-[#93c23a] disabled:cursor-not-allowed disabled:opacity-60"
       >
         {status === "submitting" ? "Enviando..." : "Enviar solicitud"}
       </button>

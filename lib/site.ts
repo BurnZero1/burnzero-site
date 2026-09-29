@@ -125,7 +125,6 @@ export type FaqItem = {
 
 /**
  * Visible FAQ copy. Answers use only claims already published on the site.
- * TODO markers are intentional gaps for the team to fill.
  * sameAs is omitted: the site does not link LinkedIn, X, or GitHub.
  * City is omitted from PostalAddress: the site only says Costa Rica.
  */
@@ -138,7 +137,7 @@ export const faqs: FaqItem[] = [
   {
     question: "¿Cómo se miden y registran las emisiones de CO₂?",
     answer:
-      "Las organizaciones cargan sus registros de emisiones y BurnZero mantiene la deuda de CO₂ pendiente visible en un solo lugar, organizada por empresa, periodo y estado de compensación. TODO: el sitio no describe el método de medición (factores de emisión, sensores o norma) con el que se calculan las toneladas.",
+      "Las organizaciones cargan sus registros de emisiones y BurnZero mantiene la deuda de CO₂ pendiente visible en un solo lugar, organizada por empresa, periodo y estado de compensación.",
   },
   {
     question: "¿Cómo funciona la conciliación automática de los créditos de carbono?",
@@ -148,23 +147,18 @@ export const faqs: FaqItem[] = [
   {
     question: "¿Qué es la prueba en blockchain y por qué importa?",
     answer:
-      "Cada compensación genera un PDF de evidencia y un enlace de transacción on-chain para que auditores y compliance puedan ver qué se compensó, con qué certificado y cuándo. BurnZero ancla esa evidencia en blockchain como registro auditable. TODO: el sitio no describe la red, el contrato ni un mecanismo concreto de resistencia a alteraciones.",
+      "Cada compensación genera un PDF de evidencia y un enlace de transacción on-chain para que auditores y compliance puedan ver qué se compensó, con qué certificado y cuándo. BurnZero ancla esa evidencia en blockchain como registro auditable.",
   },
   {
     question:
       "¿Cómo maneja los certificados oficiales y el cumplimiento, incluido FONAFIFO en Costa Rica?",
     answer:
-      "Las organizaciones suben PDFs oficiales de FONAFIFO y BurnZero valida la cédula jurídica o el ID de organización antes de vincular cada certificado a los registros pendientes. El flujo cubre operaciones en Costa Rica, incluida la deuda por combustible junto con certificados Fonafifo y la validación de titularidad. TODO: el sitio no detalla otras normas, registros o certificaciones de cumplimiento además de FONAFIFO.",
+      "Las organizaciones suben PDFs oficiales de FONAFIFO y BurnZero valida la cédula jurídica o el ID de organización antes de vincular cada certificado a los registros pendientes. El flujo cubre operaciones en Costa Rica, incluida la deuda por combustible junto con certificados Fonafifo y la validación de titularidad.",
   },
   {
     question: "¿Cómo se integra con los sistemas que la empresa ya usa?",
     answer:
-      "BurnZero ofrece importación vía API y exportación de la evidencia que necesitan sostenibilidad y finanzas, además de reportes ESG. TODO: el sitio no publica documentación de endpoints, formatos de archivo ni conectores específicos.",
-  },
-  {
-    question: "¿Cómo protege la seguridad y la privacidad de los datos?",
-    answer:
-      "TODO: el sitio no publica información sobre seguridad, cifrado, control de acceso, residencia de los datos ni una política de privacidad. Hay que confirmar esos puntos antes de describirlos.",
+      "BurnZero ofrece importación vía API y exportación de la evidencia que necesitan sostenibilidad y finanzas, además de reportes ESG.",
   },
   {
     question:
@@ -175,12 +169,12 @@ export const faqs: FaqItem[] = [
   {
     question: "¿Cuánto cuesta y cómo se puede empezar?",
     answer:
-      "TODO: el sitio no publica precios ni planes. Para empezar, solicite una demo: el equipo de BurnZero le contacta para hablar del registro de deuda de CO₂, la verificación de certificados y la conciliación auditable on-chain. Puede usar el formulario de solicitud de demo o escribir a chamorro@burn-zero.com.",
+      "Para empezar, solicite una demo: el equipo de BurnZero le contacta para hablar del registro de deuda de CO₂, la verificación de certificados y la conciliación auditable. Puede usar el formulario de solicitud de demo o escribir a chamorro@burn-zero.com.",
   },
   {
     question: "¿Qué son los fondos UCC?",
     answer:
-      "Los fondos UCC reservan el crédito sobrante para asignarlo cuando llegue el resto de la deuda de CO₂. Sirven cuando los créditos llegan antes de conocer toda la deuda, de modo que el saldo queda apartado para una asignación futura. TODO: el sitio no define la sigla UCC ni las reglas del pool.",
+      "Los fondos UCC reservan el crédito sobrante para asignarlo cuando llegue el resto de la deuda de CO₂. Sirven cuando los créditos llegan antes de conocer toda la deuda, de modo que el saldo queda apartado para una asignación futura.",
   },
 ];
 

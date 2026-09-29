@@ -1,17 +1,27 @@
-/* Shared marketing page surface (product login reference: #1a2128) */
+/* Marketing surface. Green is an accent; most of the UI stays neutral. */
 :root {
-  --background: #1a2128;
-  --page-bg: #1a2128;
-  --page-bg-elevated: #222a33;
-  --page-bg-sunken: #141a20;
+  --background: #11171b;
+  --page-bg: #11171b;
+  --page-bg-elevated: #1a2024;
+  --page-bg-sunken: #151b1f;
+  --page-text: #f3f4f4;
+  --page-muted: #9aa1a6;
+  --page-border: rgba(255, 255, 255, 0.08);
+}
+
+html body {
+  background: var(--page-bg);
+  color: var(--page-text);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
 .bg-page {
   background-color: var(--page-bg);
+  color: var(--page-text);
 }
 
 .bg-page-nav {
-  background-color: color-mix(in srgb, var(--page-bg) 70%, transparent);
+  background-color: var(--page-bg);
 }
 
 .bg-page-elevated {
@@ -23,8 +33,7 @@
 }
 
 /*
- * Remap legacy near-black utilities (TCC-locked pages like request-demo
- * may still ship bg-black / bg-zinc-950).
+ * Remap legacy near-black utilities (pages that still ship bg-black / bg-zinc-950).
  */
 .bg-black,
 .bg-zinc-950 {
@@ -35,9 +44,83 @@
 .bg-black\/80,
 .bg-zinc-950\/70,
 .bg-zinc-950\/80 {
-  background-color: color-mix(in srgb, var(--page-bg) 70%, transparent) !important;
+  background-color: color-mix(in srgb, var(--page-bg) 92%, transparent) !important;
 }
 
 .bg-zinc-950\/60 {
-  background-color: color-mix(in srgb, var(--page-bg-sunken) 80%, transparent) !important;
+  background-color: color-mix(in srgb, var(--page-bg-sunken) 92%, transparent) !important;
+}
+
+@keyframes bz-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.bz-enter {
+  animation: bz-enter 0.45s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bz-enter {
+    animation: none;
+  }
+}
+
+.bz-flow {
+  display: grid;
+  border-top: 1px solid var(--page-border);
+  border-bottom: 1px solid var(--page-border);
+}
+
+.bz-flow > li {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--page-border);
+}
+
+.bz-flow > li:last-child {
+  border-bottom: 0;
+}
+
+@media (min-width: 640px) {
+  .bz-flow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bz-flow > li:nth-child(odd) {
+    padding-right: 1.5rem;
+  }
+
+  .bz-flow > li:nth-child(even) {
+    padding-left: 1.5rem;
+    border-left: 1px solid var(--page-border);
+  }
+
+  .bz-flow > li:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bz-flow {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .bz-flow > li,
+  .bz-flow > li:nth-child(even),
+  .bz-flow > li:nth-last-child(-n + 2) {
+    border-bottom: 0;
+    border-left: 1px solid var(--page-border);
+    padding: 1.25rem 1rem;
+  }
+
+  .bz-flow > li:first-child {
+    border-left: 0;
+    padding-left: 0;
+  }
 }

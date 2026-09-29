@@ -3,59 +3,56 @@ import { CONTACT_EMAIL } from "@/lib/site";
 
 export default function SiteFooter() {
   return (
-    <footer id="contacto" className="border-t border-white/10 px-4 py-10 sm:px-6">
+    <footer id="contacto" className="border-t border-white/[0.08] px-4 py-10 sm:px-6">
       <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-8 sm:flex-row sm:items-start">
-        <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl bg-zinc-900">
-            <img
-              src="/brand-logo.png"
-              alt="Logo de BurnZero — hoja verde conectada a bloques en cadena"
-              className="h-10 w-10 object-contain"
-            />
-          </div>
+        <div className="flex items-center gap-2.5">
+          <img
+            src="/brand-logo.png"
+            alt="BurnZero"
+            className="h-7 w-7 object-contain"
+          />
           <div>
-            <p className="font-bold tracking-wide">
-              <span className="text-green-400">Burn</span>Zero
+            <p className="text-[15px] font-medium tracking-tight">
+              <span className="text-[#84b430]">Burn</span>Zero
             </p>
-            <p className="text-xs text-zinc-500">
+            <p className="text-[12px] text-[#9aa1a6]">
               Cumplimiento ambiental · Costa Rica
             </p>
           </div>
         </div>
 
-        <div className="text-sm text-zinc-300">
-          <p className="font-semibold text-white">Contacto</p>
+        <div className="text-[14px] text-[#9aa1a6]">
+          <p className="font-medium text-[#f3f4f4]">Contacto</p>
           <a
             href={`mailto:${CONTACT_EMAIL}`}
-            className="mt-2 inline-block text-green-400 transition hover:text-green-300"
+            className="mt-2 inline-block text-[#f3f4f4] transition hover:text-[#84b430]"
           >
             {CONTACT_EMAIL}
           </a>
-          <p className="mt-2 text-zinc-400">Costa Rica</p>
-          <p className="mt-1 text-xs text-zinc-500">TODO: ciudad</p>
+          <p className="mt-2">Costa Rica</p>
           <Link
             href="/request-demo"
-            className="mt-3 inline-block text-zinc-300 transition hover:text-white"
+            className="mt-3 inline-block transition hover:text-[#f3f4f4]"
           >
             Solicitar demo
           </Link>
         </div>
 
-        <div className="flex flex-wrap gap-4 text-sm text-zinc-400">
-          <a href="/#preguntas" className="transition hover:text-white">
+        <div className="flex flex-col gap-2 text-[14px] text-[#9aa1a6]">
+          <a href="/#preguntas" className="transition hover:text-[#f3f4f4]">
             Preguntas frecuentes
           </a>
-          <a href="/#como-funciona" className="transition hover:text-white">
+          <a href="/#como-funciona" className="transition hover:text-[#f3f4f4]">
             Cómo funciona
           </a>
-          <Link href="/request-demo" className="transition hover:text-white">
+          <Link href="/request-demo" className="transition hover:text-[#f3f4f4]">
             Solicitar demo
           </Link>
         </div>
       </div>
-      <p className="mx-auto mt-8 max-w-6xl text-xs text-zinc-600">
-        © {new Date().getFullYear()} BurnZero. Plataforma B2B de registro,
-        conciliación y prueba de compensación de CO₂.
+      <p className="mx-auto mt-10 max-w-6xl text-[12px] text-[#6f777c]">
+        © {new Date().getFullYear()} BurnZero. Plataforma de registro,
+        conciliación y evidencia de compensación de CO₂.
       </p>
     </footer>
   );

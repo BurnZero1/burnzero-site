@@ -3,6 +3,7 @@ import Link from "next/link";
 import SiteFooter from "../components/SiteFooter";
 import { pageMetadata, publicPages } from "@/lib/site";
 import DemoRequestForm from "./DemoRequestForm";
+import "../brand-theme.css";
 
 const demo = publicPages.find((page) => page.path === "/request-demo")!;
 
@@ -15,55 +16,57 @@ export const metadata = pageMetadata({
 export default function RequestDemoPage() {
   return (
     <>
-    <main className="min-h-screen bg-black px-6 py-10 text-white">
-      <div className="mx-auto flex max-w-6xl flex-col gap-16">
-        <nav className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-4">
-            <div className="relative h-16 w-16 overflow-hidden rounded-2xl bg-zinc-900 shadow-lg shadow-green-500/10">
-              <Image
-                src="/logo.png"
-                alt="Logo de Burn Zero"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-            <div>
-              <p className="text-2xl font-bold leading-none tracking-wide">
-                <span className="text-green-400">Burn</span>Zero
+      <main className="min-h-screen bg-page px-4 py-6 text-[#f3f4f4] sm:px-6">
+        <div className="mx-auto flex max-w-6xl flex-col gap-14">
+          <nav className="flex h-14 items-center justify-between border-b border-white/[0.08]">
+            <Link href="/" className="flex items-center gap-2.5">
+              <span className="relative h-7 w-7 overflow-hidden">
+                <Image
+                  src="/logo.png"
+                  alt="BurnZero"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </span>
+              <span className="text-[15px] font-medium tracking-tight">
+                <span className="text-[#84b430]">Burn</span>Zero
+              </span>
+            </Link>
+
+            <Link
+              href="/"
+              className="text-[13px] text-[#9aa1a6] transition hover:text-[#f3f4f4]"
+            >
+              Volver
+            </Link>
+          </nav>
+
+          <section className="grid items-start gap-12 pb-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+            <div className="lg:pt-4">
+              <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-[#9aa1a6]">
+                Solicitar demo
               </p>
-              <p className="mt-1 text-sm text-zinc-400">Conciliación de deuda de CO₂</p>
+              <h1 className="mt-4 max-w-[14em] text-[2.15rem] font-semibold leading-[1.1] tracking-[-0.025em] sm:text-[2.75rem]">
+                Concilia tu deuda de carbono con compensaciones verificadas.
+              </h1>
+              <p className="mt-5 max-w-md text-[17px] leading-relaxed text-[#9aa1a6]">
+                Comparte algunos datos y el equipo de BurnZero te contactará
+                para hablar de registros de emisiones, certificados FONAFIFO y
+                conciliación auditable.
+              </p>
             </div>
-          </Link>
 
-          <Link
-            href="/"
-            className="rounded-xl border border-white/15 px-5 py-2 text-sm font-medium text-zinc-200 transition hover:bg-white/5"
-          >
-            Volver
-          </Link>
-        </nav>
-
-        <section className="grid items-start gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="pt-6">
-            <p className="font-medium text-green-400">Solicitar demo</p>
-            <h1 className="mt-4 text-5xl font-bold leading-tight tracking-tight md:text-7xl">
-              Concilia tu deuda de carbono con compensaciones verificadas.
-            </h1>
-            <p className="mt-8 max-w-xl text-lg leading-relaxed text-zinc-300">
-              Comparte algunos detalles y el equipo de Burn Zero te contactará para hablar sobre
-              registro de deuda de CO₂, verificación de certificados y conciliación auditable on-chain.
-            </p>
-          </div>
-
-          <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-6 shadow-2xl shadow-green-500/10 backdrop-blur md:p-10">
-            <h2 className="text-3xl font-semibold">Cuéntanos sobre tu proyecto</h2>
-            <DemoRequestForm />
-          </div>
-        </section>
-      </div>
-    </main>
-    <SiteFooter />
+            <div className="border border-white/[0.08] bg-[#1a2024] p-5 sm:p-8">
+              <h2 className="text-[18px] font-medium">
+                Cuéntanos sobre tu operación
+              </h2>
+              <DemoRequestForm />
+            </div>
+          </section>
+        </div>
+      </main>
+      <SiteFooter />
     </>
   );
 }
